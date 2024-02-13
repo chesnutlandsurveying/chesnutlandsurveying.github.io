@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>W3.CSS Template</title>
+<title>Chesnut Land Surveying</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 <style>
 body, html {height: 100%}
@@ -17,8 +21,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 .bgimg {
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("/w3images/banner.png");
+  background-image: url("w3images/banner_small.png");
   min-height: 90%;
+  filter:opacity(80%) brightness(100%);
 }
 
 .column {
@@ -32,6 +37,26 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   display: table;
   clear: both;
 }
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
 </style>
 </head>
 <body>
@@ -39,32 +64,62 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
 
 <!-- Navbar (sit on top) -->
-<div class="w3-top w3-hide-small">
+  <div class="w3-top w3-hide-small">
   <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
     <a href="#" class="w3-bar-item w3-button">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button">SERVICES</a>
-    <a href="#myMap" class="w3-bar-item w3-button">CONTACT</a>
+    <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="#services" class="w3-bar-item w3-button">SERVICES</a>
+    <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
   </div>
-</div>
+</div
   
 <!-- Header with image -->
-<header class="bgimg w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-middle w3-center"  >
-    <span class="w3-text-white w3-hide-small" style="font-size:100px"><b>Chesnut<br>
-    	<span class="w3-text-white w3-hide-small" style="font-size:50px">Land Surveying
+<header class="bgimg w3-display-container" id="home">
+  <div class="w3-display-middle w3-center" style="line-height:0.5">
+    <span class="w3-text-black w3-hide-small" style="font-size:100px"><b>Chesnut<br>
+    	<span class="w3-text-black w3-hide-small" style="font-size:40px">Land Surveying
         </span>
       </span>
-    <span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b>Chesnut<br>
-    	<span class="w3-text-white w3-hide-medium" style="font-size:30px">Land Surveying
+    <span class="w3-text-black w3-hide-large w3-hide-medium" style="font-size:60px"><b>Chesnut<br>
+    	<span class="w3-text-black w3-hide-medium" style="font-size:30px">Land Surveying
         </span>
     </span>
   </div>
 </header>
 
+<!-- About Section -->
+<div class="w3-row w3-padding-64" id="about">
+  
+  <div class="w3-col m6 w3-padding-large w3-hide-small">
+    <img src="w3images/susanchesnut.jpg" class="w3-round w3-image" alt="susanchesnut" width="600" height="750">
+  </div>
+
+  <div class="w3-col m6" style="line-height:1.5">
+    <h1 class="w3-center w3-jumbo w3-text-black" style="margin-bottom:-10px"><u>About</u></h1><br>
+    <p class="w3-large">I am a Registered Land Surveyor in Tennessee (RLS #3778). 
+      Whether it's marking property lines, conducting boundary surveys, or preparing legal documents, 
+      I approach each task with professionalism and attention to detail, 
+      tailored to meet the specific needs of my clients.
+      <br>I look forward to working with you!</br>
+    </p>
+    <p class="w3-large">
+      Cell: 256-557-3285
+      <br>Email: chesnutlandsurveying@gmail.com</br>
+      <a href="https://www.facebook.com/profile.php?id=61556077124398" target="_blank">
+        <img src="/w3images/Facebook_Logo_Primary.png" alt="Facebook" style="width:42px;height:42px;">
+      </a>
+      <a href="https://www.linkedin.com/in/susanchesnut/" target="_blank">
+        <img src="/w3images/LI-In-Bug.png" alt="LinkedIn" style="width:42px;height:42px;">
+      </a>
+      </p>
+  </div>
+</div>
+
 <!-- Services Container -->
-<div class="w3-container w3-padding-64 w3-blue w3-grayscale w3-xlarge" id="about">
+<div class="w3-container w3-padding-48 w3-blue w3-grayscale w3-xlarge" id="services">
+  
   <div class="w3-content">
-    <h1 class="w3-center w3-jumbo w3-text-black" style="margin-bottom:64px">Services</h1>
+    <h1 class="w3-center w3-jumbo w3-text-black" style="margin-bottom:48px"><u>Services</u></h1>
     	<div class="row w3-text-black">
         	<div class="column">
               <p>Boundary Surveying</p>
@@ -77,19 +132,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
             <p>Property Corner Location</p>
           </div>
     	</div>
-    <!--
-    <img src="/w3images/onepage_restaurant.jpg" style="width:100%" class="w3-margin-top w3-margin-bottom" alt="Restaurant">
-    -->
   </div>
 </div>
 
-<!-- Image of location/map -->
-<img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;" id="myMap">
-
 <!-- Contact -->
-<div class="w3-container w3-padding-64 w3-light-green w3-grayscale w3-xlarge">
+<div class="w3-container w3-padding-48 w3-light-green w3-grayscale w3-xlarge" id="contact">
   <div class="w3-content">
-    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Contact</h1>
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px"><u>Contact</u></h1>
     <p>Thank you for contacting <em>Chesnut Land Surveying!</em></p>
     <p>Call us at 256.557.3285 or fill out the form below for a free quote!</p>
 

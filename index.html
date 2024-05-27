@@ -201,6 +201,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     <h1 class="w3-center w3-jumbo protest-strike-regular" style="margin-bottom:64px">Contact</h1>
     <p>Thank you for contacting <em>Chesnut Land Surveying!</em></p>
     <p>Call us at 256-557-3285 or fill out the form below for a free quote!</p>
+    <br>
+
+    <p>We are currently scheduling new jobs 4-6 weeks away from when a quote is accepted.</p>
+    <p>Please note responses could take a few days after submitting a quote request, depending on the volume of current jobs.</p>
 
     <br>Please include the address of the property and what you are looking to have done. I will get back to you as soon as possible.
  
@@ -211,15 +215,37 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
       </p>
       <p>
         <label for="phone">Phone Number</label>
-        <input id="phone" class="w3-input w3-padding-16 w3-border" type="tel" placeholder="Phone Number" required name="phone">
+        <input id="phone" class="w3-input w3-padding-16 w3-border" type="tel" placeholder="123-456-7890" required name="phone">
       </p>
       <p>
         <label for="email">Email</label>
         <input id="email" class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email" required name="email">
       </p>
       <p>
-        <label for="message">Survey Request/Information</label>
-        <textarea id="message" class="w3-input w3-padding-16 w3-border" placeholder="Property Address and Type of Survey Needed" required name="message"></textarea>
+        <label for="county">County</label>
+        <input id="county" class="w3-input w3-padding-16 w3-border" type="text" placeholder="County" required name="county">
+      </p>
+      <p>
+        <label for="address">Address</label>
+        <input id="address" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Property Address" required name="address">
+      </p>
+      <p>
+        <label for="surveys">Type of Surveys (Select all that apply)</label><br>
+        <input type="checkbox" id="boundary" name="surveys" value="Boundary">
+        <label for="boundary">Boundary</label><br>
+        <input type="checkbox" id="linestaking" name="surveys" value="PLS">
+        <label for="linestaking">Line Staking</label><br>
+        <input type="checkbox" id="site_plan" name="surveys" value="Site Plan">
+        <label for="site_plan">Site Plan</label><br>
+        <input type="checkbox" id="soil_test" name="surveys" value="Soil Test">
+        <label for="soil_test">Soil Test</label><br>
+        <input type="checkbox" id="topographic" name="surveys" value="Topographic">
+        <label for="topographic">Topographic</label>
+        
+      </p>
+      <p>
+        <label for="message">Additional Information</label>
+        <textarea id="message" class="w3-input w3-padding-16 w3-border" placeholder="Additional details about your request" name="message"></textarea>
       </p>
       <p>
         <button class="w3-button w3-light-grey w3-block" type="submit">SEND MESSAGE</button>

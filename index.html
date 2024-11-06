@@ -253,7 +253,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         <input type="checkbox" id="boundary" name="surveys" value="Boundary">
         <label for="boundary">Boundary Survey</label><br>
         <input type="checkbox" id="linestaking" name="surveys" value="PLS">
-        <label for="linestaking">Line Staking <small></small><small></small>(wooden stakes will be placed along the boundary lines)</small></small></label><br>
+        <label for="linestaking">Line Staking <small></small><small>(wooden stakes will be placed along the boundary lines)</small></small></label><br>
         <input type="checkbox" id="site_plan" name="surveys" value="Site Plan">
         <label for="site_plan">Site Plan</label><br>
         <input type="checkbox" id="soil_test" name="surveys" value="Soil Test">
@@ -263,6 +263,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         
       </p>
       <p>
+        <p><small><small>Please note responses could take a few days after submitting a quote request, depending on the volume of current jobs.</small></small></p>
         <label for="message">Additional Information</label>
         <textarea id="message" class="w3-input w3-padding-16 w3-border" placeholder="Additional details about your request" name="message"></textarea>
       </p>
@@ -270,7 +271,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         <button class="w3-button w3-light-grey w3-block" type="submit">SEND MESSAGE</button>
       </p>
       <p><small><small>After submitting the request, a new tab should pop up with a confirmation.</small></small></p>
-      <p><small><small>Please note responses could take a few days after submitting a quote request, depending on the volume of current jobs.</small></small></p>
+
       <input name="subject" type="hidden" value="New submission from {{ name }}" />
     </form>
     

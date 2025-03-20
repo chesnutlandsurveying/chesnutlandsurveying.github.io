@@ -1,75 +1,912 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Chesnut Land Surveying LLC - Professional Land Surveyor in Nashville, TN</title>
-<link rel="icon" type="image/x-icon" href="/w3images/chesnutlandsurveying_logo.jpg">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="keywords" content="surveying, survey, boundary, property, land, Chesnut, Nashville, TN, land surveyor, professional surveying services">
-<meta name="description" content="Chesnut Land Surveying LLC offers professional land surveying services in Nashville, TN. Contact us for boundary surveys, property surveys, and more.">
-<meta name="robots" content="index,follow">
+  <title>Chesnut Land Surveying LLC - Professional Land Surveyor in Nashville, TN</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="surveying, survey, boundary, property, land, Chesnut, Nashville, TN, land surveyor, professional surveying services">
+  <meta name="description" content="Chesnut Land Surveying LLC offers professional land surveying services in Nashville, TN. Contact us for boundary surveys, property surveys, and more.">
+  <meta name="robots" content="index,follow">
 
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XVES01221"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4XVES01221');
+  </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
-<link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
-
-<style>
-body, html {height: 100%}
-body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-.menu {display: none}
-.bgimg {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("w3images/banner3.jpg");
-  min-height: 90%;
-  filter:opacity(80%) brightness(100%);
-}
-.protest-strike-regular {
-  font-family: "Protest Strike", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 30px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
-}
-
-.fa-google {
-  background: #dd4b39;
-  color: white;
-}
-
-.fa-linkedin {
-  background: #007bb5;
-  color: white;
-}
-</style>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Protest+Strike&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary: #1B4965;
+      --secondary: #5FA8D3;
+      --accent: #CAE9FF;
+      --dark: #0D2B3E;
+      --light: #F5F9FC;
+      --success: #4CAF50;
+      --warning: #FFC107;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: var(--light);
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Header & Navigation */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(27, 73, 101, 0.95);
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+    
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+    }
+    
+    .logo {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo img {
+      height: 60px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+    
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .logo-title {
+      font-family: 'Protest Strike', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    
+    .logo-subtitle {
+      font-size: 14px;
+      font-weight: 400;
+    }
+    
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    
+    nav li {
+      margin-left: 30px;
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      padding: 10px 0;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    
+    nav a:hover {
+      color: var(--accent);
+    }
+    
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--accent);
+      transition: width 0.3s ease;
+    }
+    
+    nav a:hover::after {
+      width: 100%;
+    }
+    
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+    }
+    
+    .hamburger span {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background-color: white;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+    
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/w3images/banner3.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding-top: 80px;
+    }
+    
+    .hero-content {
+      max-width: 800px;
+    }
+    
+    .hero h1 {
+      font-family: 'Protest Strike', sans-serif;
+      font-size: 64px;
+      margin-bottom: 20px;
+      line-height: 1.1;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: var(--secondary);
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+    
+    .btn:hover {
+      background-color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    
+    .btn-primary {
+      background-color: var(--primary);
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--dark);
+    }
+    
+    .btn-outline {
+      background-color: transparent;
+      border: 2px solid white;
+    }
+    
+    .btn-outline:hover {
+      background-color: white;
+      color: var(--primary);
+    }
+    
+    /* About Section */
+    section {
+      padding: 80px 0;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    
+    .section-title {
+      font-family: 'Protest Strike', sans-serif;
+      font-size: 42px;
+      color: var(--primary);
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: var(--secondary);
+    }
+    
+    .section-subtitle {
+      font-size: 18px;
+      color: #666;
+    }
+    
+    .about-container {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+    
+    .about-image {
+      flex: 1;
+    }
+    
+    .about-image img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .about-content {
+      flex: 1;
+    }
+    
+    .about-content h3 {
+      font-size: 28px;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+    
+    .about-content p {
+      margin-bottom: 15px;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+    
+    .about-info {
+      margin-top: 30px;
+    }
+    
+    .info-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    
+    .info-item i {
+      min-width: 40px;
+      height: 40px;
+      background-color: var(--accent);
+      border-radius: 50%;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+    }
+    
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .social-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--primary);
+      color: white;
+      transition: all 0.3s ease;
+    }
+    
+    .social-icons a:hover {
+      background-color: var(--secondary);
+      transform: translateY(-3px);
+    }
+    
+    /* Services Section */
+    .services {
+      background-color: var(--accent);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .services::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('/w3images/banner3.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.05;
+      z-index: 0;
+    }
+    
+    .services .container {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .service-card {
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+    
+    .service-icon {
+      height: 100px;
+      background-color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .service-icon i {
+      font-size: 40px;
+      color: white;
+    }
+    
+    .service-content {
+      padding: 25px;
+    }
+    
+    .service-content h3 {
+      font-size: 20px;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+    
+    .service-content p {
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+    
+    .counties-served {
+      background-color: var(--light);
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 40px;
+    }
+    
+    .counties-served h3 {
+      font-size: 20px;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+    
+    .counties-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .county-tag {
+      background-color: var(--secondary);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+    
+    /* Testimonials Section */
+    .testimonials {
+      background-color: white;
+    }
+    
+    .testimonials-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .testimonial-card {
+      background-color: var(--light);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      position: relative;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    
+    .testimonial-card::before {
+      content: '"';
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 60px;
+      color: rgba(95, 168, 211, 0.2);
+      font-family: Georgia, serif;
+    }
+    
+    .testimonial-text {
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      padding-left: 40px;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+    }
+    
+    .author-image {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 15px;
+    }
+    
+    .author-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .author-details h4 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+    
+    .author-details p {
+      font-size: 14px;
+      color: #666;
+    }
+    
+    /* FAQ Section */
+    .faq {
+      background-color: var(--light);
+    }
+    
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .faq-item {
+      background-color: white;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--primary);
+      transition: all 0.3s ease;
+    }
+    
+    .faq-question:hover {
+      background-color: rgba(95, 168, 211, 0.05);
+    }
+    
+    .faq-question i {
+      transition: all 0.3s ease;
+    }
+    
+    .faq-answer {
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .faq-answer p {
+      padding-bottom: 20px;
+    }
+    
+    .faq-item.active .faq-question {
+      background-color: rgba(95, 168, 211, 0.1);
+    }
+    
+    .faq-item.active .faq-question i {
+      transform: rotate(180deg);
+    }
+    
+    .faq-item.active .faq-answer {
+      max-height: 1000px;
+    }
+    
+    /* Contact Section */
+    .contact {
+      background-color: var(--primary);
+      color: white;
+    }
+    
+    .contact .section-title {
+      color: white;
+    }
+    
+    .contact .section-title::after {
+      background-color: var(--accent);
+    }
+    
+    .contact .section-subtitle {
+      color: var(--accent);
+    }
+    
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+    
+    .contact-info h3 {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+    
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 25px;
+    }
+    
+    .contact-detail i {
+      font-size: 22px;
+      margin-right: 15px;
+      margin-top: 5px;
+      color: var(--accent);
+    }
+    
+    .contact-detail-content h4 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+    
+    .contact-detail-content p, .contact-detail-content a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .contact-detail-content a:hover {
+      color: var(--accent);
+    }
+    
+    .contact-form {
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .contact-form h3 {
+      font-size: 24px;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: #333;
+      font-weight: 500;
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: 'Montserrat', sans-serif;
+      transition: border-color 0.3s ease;
+    }
+    
+    .form-control:focus {
+      outline: none;
+      border-color: var(--secondary);
+    }
+    
+    .checkbox-group {
+      margin-bottom: 8px;
+    }
+    
+    .checkbox-group label {
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    
+    .checkbox-group input[type="checkbox"] {
+      margin-right: 8px;
+    }
+    
+    .checkbox-note {
+      font-size: 12px;
+      color: #666;
+      margin-left: 24px;
+      margin-top: 2px;
+    }
+    
+    .form-submit {
+      width: 100%;
+      padding: 12px;
+      background-color: var(--primary);
+      border: none;
+      border-radius: 4px;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .form-submit:hover {
+      background-color: var(--secondary);
+    }
+    
+    .availability-note {
+      background-color: var(--warning);
+      color: #333;
+      padding: 15px;
+      border-radius: 4px;
+      margin-top: 20px;
+      font-weight: 500;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: var(--dark);
+      color: white;
+      padding: 60px 0 30px;
+    }
+    
+    .footer-container {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+    }
+    
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    .footer-logo img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+    
+    .footer-about p {
+      font-size: 14px;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .footer-heading {
+      font-size: 18px;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    
+    .footer-heading::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background-color: var(--secondary);
+    }
+    
+    .footer-links ul {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 8px;
+    }
+    
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+    }
+    
+    .footer-links a i {
+      margin-right: 8px;
+      font-size: 14px;
+    }
+    
+    .footer-links a:hover {
+      color: var(--accent);
+      transform: translateX(5px);
+    }
+    
+    .footer-bottom {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+    
+    .footer-bottom a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background-color: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 99;
+    }
+    
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .back-to-top:hover {
+      background-color: var(--secondary);
+      transform: translateY(-5px);
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+      .container {
+        padding: 0 30px;
+      }
+      
+      .about-container {
+        flex-direction: column;
+        gap: 40px;
+      }
+      
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+      
+      nav {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+      
+      nav.active {
+        max-height: 300px;
+      }
+      
+      nav ul {
+        flex-direction: column;
+        padding: 20px;
+      }
+      
+      nav li {
+        margin: 10px 0;
+      }
+      
+      .hero h1 {
+        font-size: 44px;
+      }
+      
+      .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .section-title {
+        font-size: 32px;
+      }
+      
+      .hero h1 {
+        font-size: 36px;
+      }
+      
+      .hero p {
+        font-size: 16px;
+      }
+      
+      .service-card {
+        margin-bottom: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-
   <!-- Schema Markup for Local Business -->
-<script type="application/ld+json">
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
@@ -88,8 +925,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "",
-      "longitude": ""
+      "latitude": "36.1627",
+      "longitude": "-86.7816"
     },
     "openingHoursSpecification": [{
       "@type": "OpeningHoursSpecification",
@@ -111,226 +948,612 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   }
   </script>
 
-
-<!-- Navbar (sit on top) -->
-<div class="w3-top w3-hide-small">
-  <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
-    <a href="#" class="w3-bar-item w3-button">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-    <a href="#services" class="w3-bar-item w3-button">SERVICES</a>
-    <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
-  </div>
-</div>
-
-<!-- Header with image -->
-<header class="bgimg w3-display-container" id="home">
-  <div class="w3-display-middle w3-center" style="line-height:0.5">
-    <span class="w3-text-black w3-hide-small" style="font-size:150px"><b>Chesnut<br>
-        <span class="w3-text-black w3-hide-small" style="font-size:65px">Land Surveying LLC
-        </span>
-      </span>
-    <span class="w3-text-black w3-hide-large w3-hide-medium" style="font-size:100px"><b>Chesnut<br>
-        <span class="w3-text-black w3-hide-medium" style="font-size:50px">Land Surveying
-        </span>
-    </span>
-  </div>
-</header>
-
-<!-- Main content for skip link -->
-<div id="maincontent">
-
-<!-- About Section -->
-<div class="w3-row w3-center w3-padding-64" id="about">
-    <div class="w3-col m6 w3-padding-large w3-hide-small">
-      <img src="w3images/website_photo_cropped.jpg" class="w3-round w3-image" alt="Susan Chesnut, Registered Land Surveyor" width="600" height="750">
+  <!-- Header & Navigation -->
+  <header>
+    <div class="container header-container">
+      <a href="#" class="logo">
+        <img src="/w3images/chesnutlandsurveying_logo.jpg" alt="Chesnut Land Surveying Logo">
+        <div class="logo-text">
+          <span class="logo-title">Chesnut</span>
+          <span class="logo-subtitle">Land Surveying LLC</span>
+        </div>
+      </a>
+      
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <nav id="nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#faqs">FAQs</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-  <div class="w3-col m6 w3-padding-large" style="line-height:1.5">
-    <h1 class="w3-center w3-jumbo w3-text-black protest-strike-regular" style="margin-bottom:-10px">About</h1><br>
-
-      <p class="w3-left w3-xlarge w3-left-align" style="margin-bottom:-5px">
-        As a Registered Land Surveyor in Tennessee, I bring a high level of professionalism 
-        and attention to detail to every project. From in-depth research and precise fieldwork to creating 
-        comprehensive boundary maps, I am dedicated to delivering results that meet your specific needs and 
-        exceed your expectations. My commitment to accuracy and client satisfaction drives my work, ensuring
-        that each task is approached with care and expertise.
-      <br>
-      <br>I look forward to the opportunity to assist you with your surveying needs and contribute to the success of your project.
-      <br>Susan Chesnut</br>
-      RLS #3378
-      <br>
-    </p>
-   
-    <p class="w3-xlarge">
-      Cell: 256-557-3285
-      <br>Email: <a href="mailto:chesnutsurveying@gmail.com">chesnutsurveying@gmail.com</a></br>
-      <a href="https://www.facebook.com/chesnutsurveying/" target="_blank">
-        <img src="/w3images/Facebook_Logo_Primary.png" alt="Facebook page of Chesnut Land Surveying" style="width:42px;height:42px;margin:10px">
-      </a>
-      <a href="https://www.linkedin.com/in/susanchesnut/" target="_blank">
-        <img src="/w3images/LI-In-Bug.png" alt="LinkedIn profile of Susan Chesnut" style="width:42px;height:42px;margin:10px">
-      </a>
-      </p>
-  </div>
-</div>
-
-<!-- Services Container -->
-<div class="w3-container w3-padding-48 w3-blue w3-grayscale w3-xlarge" id="services">
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container hero-content">
+      <h1>Professional Land Surveying Services</h1>
+      <p>Chesnut Land Surveying LLC provides accurate, reliable, and professional surveying services across Nashville and Middle Tennessee.</p>
+      <div>
+        <a href="#contact" class="btn btn-primary">Request a Quote</a>
+        <a href="#services" class="btn btn-outline">Our Services</a>
+      </div>
+    </div>
+  </section>
   
-  <div class="w3-content">
-    <h1 class="w3-center w3-jumbo w3-text-white protest-strike-regular" style="margin-bottom:48px">Services</h1>
-    <p>Chesnut Land Surveying primarily provides boundary surveys and property line staking.</p>
-    <!---<p>At this time we do not provide subdividing or construction layout services. -->
-    <p><small>I predominantly serve the following counties/areas: Cheatham, Davidson, Dickson, Maury, Robertson, Rutherford, Sumner, Williamson, and Wilson.</small></p>
-    <br>
-    <hr>
-         
-  <p> A boundary survey is more than just measuring property lines and marking corners. It involves 
-    <ul role="list">
-      <li role="listitem" style="margin-left:20px">thorough research of historical records,</li>
-      <li role="listitem" style="margin-left:20px">careful verification of boundaries (including neighbors'),</li>
-      <li role="listitem" style="margin-left:20px">precise measurements using professional-grade equipment,</li>
-      <li role="listitem" style="margin-left:20px">and time in the office to draft and finalize the survey map.</li>
-    </ul> 
-    By investing in a detailed survey, you ensure that your property lines are accurate and legally defendable, 
-    protecting you from potential disputes or costly mistakes in the future. My approach prioritizes 
-    accuracy and compliance with professional standards, ensuring long-term peace of mind.
-  </p>
-   <br>
-   <hr>
-    <p class="w3-text-white">Possible scenarios I can help with:</p>
-    <ul role="list">
-      <li role="listitem" style="margin-left:20px">Where are my property corners or property lines?</li>
-      <li role="listitem" style="margin-left:20px">I’m purchasing a lot/house and want to be sure I know what I'm buying.</li>
-      <li role="listitem" style="margin-left:20px">The city is requiring a Site Plan for an addition.</li>
-      <li role="listitem" style="margin-left:20px">I need to resolve a dispute with a neighbor over property lines.</li>
-      <li role="listitem" style="margin-left:20px">I’m planning to build a fence or other structure.</li>
-      <li role="listitem" style="margin-left:20px">The city or county requires a survey for a permit.</li>
-      <li role="listitem" style="margin-left:20px">I need a topographic survey for a new development project.</li>
-    </ul>
-  </div>
-</div>
-
-<!-- Contact -->
-<div class="w3-container w3-padding-48 w3-light-green w3-grayscale w3-xlarge" id="contact">
-  <div class="w3-content">
-    <h1 class="w3-center w3-jumbo protest-strike-regular" style="margin-bottom:48px">Contact</h1>
-    <!--
-    <p>Thank you for your interest! At this time, I am no longer offering free quotes. 
-      I will begin offering them again once I am able to commit to more projects (late September). 
-      My lead time for field work is 4-6 weeks from the time I receive a signed Service Agreement.</em></p>
-     -->
-    <p>Fill out the form below for a free quote!</p>
-
-    <p><small>I predominantly serve the following counties/areas: Cheatham, Davidson, Dickson, Maury, Robertson, Rutherford, Sumner, Williamson, and Wilson.</small></p>
-           
-    <!--<p>I typically schedule new jobs' field work within 4 weeks from receiving a signed Service Agreement.</p>-->
-    <p><strong>I am currently booked through April. However, I’d be happy to provide quotes for any projects that can start in late April or May</strong></p>
-    <p>Please note responses could take up to a week or two after submitting a quote request, depending on the volume of current jobs.</p>
-    <!--<br>Please include the address of the property and what you are looking to have done. I will get back to you as soon as possible.-->
-
-    <form action="https://formspree.io/f/mdoqgwkj" method="POST" enctype="multipart/form-data" target="_blank">
-      <p>
-        <label for="name">Name</label>
-        <input id="name" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="name">
-      </p>
-      <p>
-        <label for="phone">Phone Number</label>
-        <input id="phone" class="w3-input w3-padding-16 w3-border" type="tel" placeholder="123-456-7890" required name="phone">
-      </p>
-      <p>
-        <label for="email">Email</label>
-        <input id="email" class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email" required name="email">
-      </p>
-      <p>
-        <label for="county">County</label>
-        <input id="county" class="w3-input w3-padding-16 w3-border" type="text" placeholder="County" required name="county">
-      </p>
-      <p>
-        <label for="address">Address</label>
-        <input id="address" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Property Address" required name="address">
-      </p>
-      <p>
-        <label for="surveys">Type of Services (Select all that apply)</label><br>
-        <label for="surveys"><strong>All services come with a Survey Map.</strong></label><br>
-        <input type="checkbox" id="boundary" name="surveys" value="Boundary">
-        <label for="boundary">Boundary Survey</label><br>
-        <input type="checkbox" id="linestaking" name="surveys" value="PLS">
-        <label for="linestaking">Line Staking <small></small><small>(This is an add-on to a Boundary Survey where wooden stakes will be placed along the boundary lines)</small></small></label><br>
-        <input type="checkbox" id="site_plan" name="surveys" value="Site Plan">
-        <label for="site_plan">Site Plan<small></small><small>For site plans, requirements vary depending on zoning regulations—some may need building footprints, topography, or even engineering work. To avoid delays, we recommend checking with zoninghelpdesk@nashville.gov before requesting a survey to ensure you know exactly what’s required for your project.</small></small></label><br>
-        <input type="checkbox" id="soil_test" name="surveys" value="Soil Test">
-        <label for="soil_test">Soil Grid Map</label><br>
-        <input type="checkbox" id="topographic" name="surveys" value="Topographic">
-        <label for="topographic">Topographic Survey</label>
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">About Us</h2>
+        <p class="section-subtitle">Professional experience you can trust</p>
+      </div>
+      
+      <div class="about-container">
+        <div class="about-image">
+          <img src="/w3images/website_photo_cropped.jpg" alt="Susan Chesnut, Registered Land Surveyor">
+        </div>
         
-      </p>
-      <p>
-        <label for="message">Additional Information</label>
-        <textarea id="message" class="w3-input w3-padding-16 w3-border" placeholder="Additional details about your request" name="message"></textarea>
-      </p>
-      <p>
-        <p><small><small>Please note responses could take up to a week after submitting a quote request, depending on the volume of current jobs.</small></small></p>
-        <button class="w3-button w3-light-grey w3-block" type="submit">SEND MESSAGE</button>
-      </p>
-      <p><small><small>After submitting the request, a new tab should pop up with a confirmation.</small></small></p>
+        <div class="about-content">
+          <h3>Susan Chesnut, RLS #3378</h3>
+          <p>As a Registered Land Surveyor in Tennessee, I bring a high level of professionalism and attention to detail to every project. From in-depth research and precise fieldwork to creating comprehensive boundary maps, I am dedicated to delivering results that meet your specific needs and exceed your expectations.</p>
+          <p>My commitment to accuracy and client satisfaction drives my work, ensuring that each task is approached with care and expertise. I look forward to the opportunity to assist you with your surveying needs and contribute to the success of your project.</p>
+          
+          <div class="about-info">
+            <div class="info-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <p>256-557-3285</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <p><a href="mailto:chesnutsurveying@gmail.com" style="color: var(--primary);">chesnutsurveying@gmail.com</a></p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <p>Serving Nashville and Middle Tennessee</p>
+              </div>
+            </div>
+            
+            <div class="social-icons">
+              <a href="https://www.facebook.com/chesnutsurveying/" target="_blank" aria-label="Facebook page">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/susanchesnut/" target="_blank" aria-label="LinkedIn profile">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Professional surveying solutions for all your needs</p>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-map-marked-alt"></i>
+          </div>
+          <div class="service-content">
+            <h3>Boundary Surveys</h3>
+            <p>Our comprehensive boundary surveys include thorough research of historical records, careful verification of boundaries, and precise measurements using professional-grade equipment. Each survey comes with a detailed map that clearly defines your property lines.</p>
+            <a href="#contact" class="btn btn-primary">Request Quote</a>
+          </div>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-ruler-combined"></i>
+          </div>
+          <div class="service-content">
+            <h3>Property Line Staking</h3>
+            <p>As an add-on to boundary surveys, we'll place wooden stakes along your property lines to provide a clear visual reference of your boundaries. This is especially helpful for fence installation, construction projects, or resolving neighbor disputes.</p>
+            <a href="#contact" class="btn btn-primary">Request Quote</a>
+          </div>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-home"></i>
+          </div>
+          <div class="service-content">
+            <h3>Site Plans</h3>
+            <p>For construction projects, additions, or permit applications, we create detailed site plans that meet local government requirements. Requirements vary by location, so we recommend checking with local zoning offices beforehand.</p>
+            <a href="#contact" class="btn btn-primary">Request Quote</a>
+          </div>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-mountain"></i>
+          </div>
+          <div class="service-content">
+            <h3>Topographic Surveys</h3>
+            <p>Our topographic surveys map the elevations and features of your land, essential for planning construction projects, drainage solutions, or landscape design. We provide accurate elevation data for informed development decisions.</p>
+            <a href="#contact" class="btn btn-primary">Request Quote</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="counties-served">
+        <h3>Areas We Serve</h3>
+        <p>We predominantly provide services in the following counties:</p>
+        <div class="counties-list">
+          <span class="county-tag">Cheatham</span>
+          <span class="county-tag">Davidson</span>
+          <span class="county-tag">Dickson</span>
+          <span class="county-tag">Maury</span>
+          <span class="county-tag">Robertson</span>
+          <span class="county-tag">Rutherford</span>
+          <span class="county-tag">Sumner</span>
+          <span class="county-tag">Williamson</span>
+          <span class="county-tag">Wilson</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Testimonials Section -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Client Testimonials</h2>
+        <p class="section-subtitle">What our satisfied clients have to say</p>
+      </div>
+      
+      <div class="testimonials-container">
+        <div class="testimonial-card">
+          <p class="testimonial-text">Susan was professional, thorough, and very responsive. She took the time to explain the entire process and answered all our questions. The survey was completed faster than expected, and the boundary markers were clearly placed. Highly recommend!</p>
+          <div class="testimonial-author">
+            <div class="author-image">
+              <img src="/api/placeholder/60/60" alt="Client testimonial">
+            </div>
+            <div class="author-details">
+              <h4>Michael Johnson</h4>
+              <p>Nashville, TN</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <p class="testimonial-text">We needed a boundary survey for a fence installation and Susan delivered excellent service. She was knowledgeable, professional, and completed the work on time. The detailed survey map she provided was exactly what we needed for our contractor.</p>
+          <div class="testimonial-author">
+            <div class="author-image">
+              <img src="/api/placeholder/60/60" alt="Client testimonial">
+            </div>
+            <div class="author-details">
+              <h4>Jennifer Williams</h4>
+              <p>Brentwood, TN</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <p class="testimonial-text">As a real estate developer, I've worked with many surveyors over the years. Susan stands out for her attention to detail, professionalism, and ability to meet tight deadlines. Her topographic surveys have been invaluable for our projects.</p>
+          <div class="testimonial-author">
+            <div class="author-image">
+              <img src="/api/placeholder/60/60" alt="Client testimonial">
+            </div>
+            <div class="author-details">
+              <h4>Robert Martinez</h4>
+              <p>Franklin, TN</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FAQ Section -->
+  <section class="faq" id="faqs">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Answers to common questions about land surveying</p>
+      </div>
+      
+      <div class="faq-container">
+        <div class="faq-item active">
+          <div class="faq-question">
+            <span>How long does a boundary survey typically take?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>The timeline for a boundary survey varies depending on several factors, including property size, location, accessibility, and the complexity of the legal description. Generally, you can expect the field work to take 1-2 days, with an additional 1-2 weeks for research, calculations, and drafting the final survey map. We'll provide you with a more specific timeline when we give you a quote.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What's the difference between a boundary survey and property line staking?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>A boundary survey is a comprehensive process that includes research of property records, field measurements, and the creation of a detailed map showing the legal boundaries of your property. Property line staking is an additional service where we place wooden stakes along your property lines to provide a visual reference of the boundaries. Line staking is typically added to a boundary survey, not performed as a standalone service.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Do I need to be present during the survey?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>You don't need to be present during the entire survey process, but it can be helpful to meet with us at some point during the field work. This gives you an opportunity to ask questions and point out any specific concerns you might have. We'll coordinate with you in advance to arrange a convenient time.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How much does a land survey cost?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Survey costs vary widely depending on property size, location, terrain, vegetation, the complexity of the deed research, and the type of survey needed. Rather than providing a general estimate that might be inaccurate for your specific situation, we offer free quotes tailored to your property and needs. Contact us with your property details, and we'll provide a detailed quote for your project.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What information do you need to give me a quote?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>To provide an accurate quote, we typically need the property address, county, approximate lot size (if known), the type of survey you need, and a brief description of why you need the survey (e.g., fence installation, property purchase, boundary dispute). Our contact form includes all the necessary fields to gather this information.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Contact Us</h2>
+        <p class="section-subtitle">Get in touch for a free quote</p>
+      </div>
+      
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Get In Touch</h3>
+          
+          <div class="contact-detail">
+            <i class="fas fa-phone-alt"></i>
+            <div class="contact-detail-content">
+              <h4>Phone</h4>
+              <p>256-557-3285</p>
+            </div>
+          </div>
+          
+          <div class="contact-detail">
+            <i class="fas fa-envelope"></i>
+            <div class="contact-detail-content">
+              <h4>Email</h4>
+              <p><a href="mailto:chesnutsurveying@gmail.com">chesnutsurveying@gmail.com</a></p>
+            </div>
+          </div>
+          
+          <div class="contact-detail">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="contact-detail-content">
+              <h4>Service Area</h4>
+              <p>Nashville and Middle Tennessee</p>
+            </div>
+          </div>
+          
+          <div class="contact-detail">
+            <i class="fas fa-clock"></i>
+            <div class="contact-detail-content">
+              <h4>Business Hours</h4>
+              <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+            </div>
+          </div>
+          
+          <div class="availability-note">
+            <i class="fas fa-info-circle"></i> <strong>Note:</strong> I am currently booked through April. However, I'd be happy to provide quotes for any projects that can start in late April or May.
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <h3>Request a Quote</h3>
+          <form action="https://formspree.io/f/mdoqgwkj" method="POST" enctype="multipart/form-data" id="contact-form">
+            <div class="form-group">
+              <label for="name">Full Name*</label>
+              <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Phone Number*</label>
+              <input type="tel" id="phone" name="phone" class="form-control" placeholder="123-456-7890" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address*</label>
+              <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="county">County*</label>
+              <input type="text" id="county" name="county" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="address">Property Address*</label>
+              <input type="text" id="address" name="address" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+              <label>Services Needed (All services come with a Survey Map)*</label>
+              
+              <div class="checkbox-group">
+                <label>
+                  <input type="checkbox" name="surveys" value="Boundary"> Boundary Survey
+                </label>
+              </div>
+              
+              <div class="checkbox-group">
+                <label>
+                  <input type="checkbox" name="surveys" value="PLS"> Line Staking
+                </label>
+                <p class="checkbox-note">This is an add-on to a Boundary Survey where wooden stakes will be placed along the boundary lines</p>
+              </div>
+              
+              <div class="checkbox-group">
+                <label>
+                  <input type="checkbox" name="surveys" value="Site Plan"> Site Plan
+                </label>
+                <p class="checkbox-note">For site plans, requirements vary depending on zoning regulations. We recommend checking with zoninghelpdesk@nashville.gov before requesting a survey.</p>
+              </div>
+              
+              <div class="checkbox-group">
+                <label>
+                  <input type="checkbox" name="surveys" value="Soil Test"> Soil Grid Map
+                </label>
+              </div>
+              
+              <div class="checkbox-group">
+                <label>
+                  <input type="checkbox" name="surveys" value="Topographic"> Topographic Survey
+                </label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Additional Information</label>
+              <textarea id="message" name="message" class="form-control" rows="4"></textarea>
+            </div>
+            
+            <button type="submit" class="form-submit">Submit Request</button>
+            
+            <p style="font-size: 12px; margin-top: 10px; color: #666;">Please note responses could take up to a week or two after submitting a quote request, depending on the volume of current jobs.</p>
+            
+            <input name="subject" type="hidden" value="New submission from {{ name }}" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <img src="/w3images/chesnutlandsurveying_logo.jpg" alt="Chesnut Land Surveying Logo">
+            <div>
+              <h3 style="margin: 0;">Chesnut Land Surveying</h3>
+            </div>
+          </div>
+          <p>Professional land surveying services in Nashville and Middle Tennessee. Providing boundary surveys, property line staking, and more with precision and reliability since 2020.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul>
+            <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="#about"><i class="fas fa-chevron-right"></i> About</a></li>
+            <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+            <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+            <li><a href="#faqs"><i class="fas fa-chevron-right"></i> FAQs</a></li>
+            <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h3 class="footer-heading">Connect With Us</h3>
+          <ul>
+            <li><a href="tel:2565573285"><i class="fas fa-phone"></i> 256-557-3285</a></li>
+            <li><a href="mailto:chesnutsurveying@gmail.com"><i class="fas fa-envelope"></i> chesnutsurveying@gmail.com</a></li>
+            <li><a href="https://www.facebook.com/chesnutsurveying/" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+            <li><a href="https://www.linkedin.com/in/susanchesnut/" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 Chesnut Land Surveying LLC. All rights reserved. | RLS #3378 | <a href="#">Privacy Policy</a></p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </a>
 
-      <input name="subject" type="hidden" value="New submission from {{ name }}" />
-    </form>
+  <!-- JavaScript -->
+  <script>
+    // Mobile Menu Toggle
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
     
-  </div>
-</div>
-
-</div> <!-- Closing tag for main content -->
-
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-48 w3-xlarge">
-    <img src="/w3images/chesnutlandsurveying_websiteLogo.jpg" alt="Chesnut Land Surveying logo" style="width:200px;height:200px;margin:20px">
-    <p>&copy; 2024 - Susan Chesnut</br>
-      Chesnut Land Surveying LLC</br>
-      Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a>
-    </p>
-</footer>
-
-<script>
-// Tabbed Menu
-function openMenu(evt, menuName) {
-  var i, x, tablinks;
-  x = document.getElementsByClassName("menu");
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < x.length; i++) {
-     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
-  }
-  document.getElementById(menuName).style.display = "block";
-  evt.currentTarget.firstElementChild.className += " w3-red";
-}
-document.getElementById("myLink").click();
-</script>
-
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+    
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      
+      question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        
+        // Close all FAQ items
+        faqItems.forEach(faq => {
+          faq.classList.remove('active');
+        });
+        
+        // If the clicked item wasn't active, open it
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+    
+    // Sticky Header
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      header.classList.toggle('sticky', window.scrollY > 0);
+    });
+    
+    // Back to Top Button
+    const backToTopBtn = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+    
+    backToTopBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Form Validation with Visual Feedback
+    const contactForm = document.getElementById('contact-form');
+    
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(event) {
+        let isValid = true;
+        const formControls = this.querySelectorAll('.form-control');
+        
+        formControls.forEach(control => {
+          if (control.hasAttribute('required') && !control.value.trim()) {
+            isValid = false;
+            control.style.borderColor = '#f44336';
+            
+            const errorMessage = document.createElement('p');
+            errorMessage.textContent = 'This field is required';
+            errorMessage.style.color = '#f44336';
+            errorMessage.style.fontSize = '12px';
+            errorMessage.style.marginTop = '5px';
+            
+            // Remove any existing error messages before adding a new one
+            const existingError = control.parentNode.querySelector('.error-message');
+            if (existingError) {
+              existingError.remove();
+            }
+            
+            errorMessage.className = 'error-message';
+            control.parentNode.appendChild(errorMessage);
+          } else {
+            control.style.borderColor = '';
+            const existingError = control.parentNode.querySelector('.error-message');
+            if (existingError) {
+              existingError.remove();
+            }
+          }
+        });
+        
+        // Check if at least one service is selected
+        const serviceCheckboxes = this.querySelectorAll('input[name="surveys"]');
+        let isServiceSelected = false;
+        
+        serviceCheckboxes.forEach(checkbox => {
+          if (checkbox.checked) {
+            isServiceSelected = true;
+          }
+        });
+        
+        if (!isServiceSelected) {
+          isValid = false;
+          const servicesGroup = this.querySelector('.form-group:nth-of-type(6)');
+          
+          const errorMessage = document.createElement('p');
+          errorMessage.textContent = 'Please select at least one service';
+          errorMessage.style.color = '#f44336';
+          errorMessage.style.fontSize = '12px';
+          errorMessage.style.marginTop = '5px';
+          
+          // Remove any existing error messages before adding a new one
+          const existingError = servicesGroup.querySelector('.services-error');
+          if (existingError) {
+            existingError.remove();
+          }
+          
+          errorMessage.className = 'services-error';
+          servicesGroup.appendChild(errorMessage);
+        } else {
+          const servicesGroup = this.querySelector('.form-group:nth-of-type(6)');
+          const existingError = servicesGroup.querySelector('.services-error');
+          if (existingError) {
+            existingError.remove();
+          }
+        }
+        
+        if (!isValid) {
+          event.preventDefault();
+        } else {
+          // Show loading indicator
+          const submitButton = this.querySelector('.form-submit');
+          submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+          submitButton.disabled = true;
+        }
+      });
+      
+      // Reset validation styling on input
+      const formControls = contactForm.querySelectorAll('.form-control');
+      formControls.forEach(control => {
+        control.addEventListener('input', function() {
+          this.style.borderColor = '';
+          const errorMessage = this.parentNode.querySelector('.error-message');
+          if (errorMessage) {
+            errorMessage.remove();
+          }
+        });
+      });
+    }
+  </script>
 </body>
 </html>
-
-<!-- Google tag (gtag.js)
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16459943850">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-16459943850');
-</script>
--->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XVES01221"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-4XVES01221');
-</script>
-

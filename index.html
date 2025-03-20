@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="keywords" content="surveying, survey, boundary, property, land, Chesnut, Nashville, TN, land surveyor, professional surveying services">
-  <meta name="description" content="Chesnut Land Surveying LLC offers professional land surveying services in Nashville, TN. Contact me for boundary surveys, property surveys, and more.">
+  <meta name="description" content="Chesnut Land Surveying LLC offers professional land surveying services in Nashville, TN. Contact us for boundary surveys, property surveys, and more.">
   <meta name="robots" content="index,follow">
 
   <!-- Google tag (gtag.js) -->
@@ -76,7 +76,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 0; /* Increased padding to accommodate larger logo */
+      padding: 10px 0;
     }
     
     .logo {
@@ -87,23 +87,25 @@
     }
     
     .logo img {
-      height: auto;
-      width: 90px;
-      margin-right: 15px;
-      border-radius: 0;
-      object-fit: contain;
-      max-height: 70px;
+      height: 60px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+    
+    .logo-text {
+      display: flex;
+      flex-direction: column;
     }
     
     .logo-title {
       font-family: 'Protest Strike', sans-serif;
-      font-size: 24px;
+      font-size: 26px;
       font-weight: 700;
       line-height: 1.2;
     }
     
     .logo-subtitle {
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 400;
     }
     
@@ -187,6 +189,7 @@
       margin-bottom: 20px;
       line-height: 1.1;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      color: white;
     }
     
     .hero p {
@@ -722,24 +725,17 @@
       gap: 40px;
     }
     
-    .footer-logo img {
-      height: auto;
-      width: 90px;
-      border-radius: 0;
-      margin-right: 15px;
-      object-fit: contain;
-      max-height: 70px;
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
     }
     
-    /* Footer logo fix */
     .footer-logo img {
-      width: 90px; /* Match the header size */
-      height: 90px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
       margin-right: 15px;
-      object-fit: contain;
-      background-color: white;
-      padding: 2px;
     }
     
     .footer-about p {
@@ -916,7 +912,7 @@
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Chesnut Land Surveying LLC",
-    "image": "/w3images/chesnutsurveying_websiteLogo.jpg",
+    "image": "",
     "@id": "",
     "url": "https://chesnutsurveying.com/",
     "telephone": "256-557-3285",
@@ -957,7 +953,29 @@
   <header>
     <div class="container header-container">
       <a href="#" class="logo">
-        <img src="/w3images/chesnutlandsurveying_websiteLogo.jpg" alt="Chesnut Land Surveying LLC Logo">
+        <div style="width: 90px; height: 90px; margin-right: 15px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" style="width: 100%; height: 100%;">
+            <circle cx="500" cy="450" r="400" fill="#003A5D"/>
+            <path d="M300 450 L400 250 L600 250 L700 450" fill="none" stroke="#003A5D" stroke-width="15"/>
+            <path d="M480 450 L590 200 L670 450" fill="none" stroke="#003A5D" stroke-width="15"/>
+            <path d="M150 800 Q500 750 850 800" fill="#5C7B1E"/>
+            <g transform="translate(475, 280) scale(0.6)">
+              <path d="M40 50 L40 350 M-80 350 L160 350 M-40 50 L120 50" stroke="#FFFFFF" stroke-width="20" fill="none"/>
+              <path d="M0 50 L0 350" stroke="#FFFFFF" stroke-width="30" fill="none"/>
+              <rect x="-60" y="100" width="120" height="150" fill="#003A5D" stroke="#FFFFFF" stroke-width="10"/>
+              <circle cx="0" cy="175" r="35" fill="#FFFFFF"/>
+              <circle cx="0" cy="175" r="20" fill="none" stroke="#FFFFFF" stroke-width="5"/>
+              <g transform="translate(0, 280)">
+                <circle cx="-30" cy="0" r="8" fill="#FFFFFF"/>
+                <circle cx="0" cy="0" r="8" fill="#FFFFFF"/>
+                <circle cx="30" cy="0" r="8" fill="#FFFFFF"/>
+                <circle cx="-30" cy="25" r="8" fill="#FFFFFF"/>
+                <circle cx="0" cy="25" r="8" fill="#FFFFFF"/>
+                <circle cx="30" cy="25" r="8" fill="#FFFFFF"/>
+              </g>
+            </g>
+          </svg>
+        </div>
         <div class="logo-text">
           <span class="logo-title">Chesnut</span>
           <span class="logo-subtitle">Land Surveying LLC</span>
@@ -998,7 +1016,7 @@
   <section class="about" id="about">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">About Me</h2>
+        <h2 class="section-title">About Us</h2>
         <p class="section-subtitle">Professional experience you can trust</p>
       </div>
       
@@ -1050,7 +1068,7 @@
   <section class="services" id="services">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Services</h2>
+        <h2 class="section-title">Our Services</h2>
         <p class="section-subtitle">Professional surveying solutions for all your needs</p>
       </div>
       
@@ -1166,7 +1184,7 @@
             <i class="fas fa-chevron-down"></i>
           </div>
           <div class="faq-answer">
-            <p>You don't need to be present during the entire survey process, but it can be helpful to meet with me at some point during the field work. This gives you an opportunity to ask questions and point out any specific concerns you might have. We'll coordinate with you in advance to arrange a convenient time.</p>
+            <p>You don't need to be present during the entire survey process, but it can be helpful to meet with us at some point during the field work. This gives you an opportunity to ask questions and point out any specific concerns you might have. We'll coordinate with you in advance to arrange a convenient time.</p>
           </div>
         </div>
         
@@ -1176,7 +1194,7 @@
             <i class="fas fa-chevron-down"></i>
           </div>
           <div class="faq-answer">
-            <p>Survey costs vary widely depending on property size, location, terrain, vegetation, the complexity of the deed research, and the type of survey needed. Rather than providing a general estimate that might be inaccurate for your specific situation, we offer free quotes tailored to your property and needs. Contact me with your property details, and we'll provide a detailed quote for your project.</p>
+            <p>Survey costs vary widely depending on property size, location, terrain, vegetation, the complexity of the deed research, and the type of survey needed. Rather than providing a general estimate that might be inaccurate for your specific situation, we offer free quotes tailored to your property and needs. Contact us with your property details, and we'll provide a detailed quote for your project.</p>
           </div>
         </div>
         
@@ -1186,7 +1204,7 @@
             <i class="fas fa-chevron-down"></i>
           </div>
           <div class="faq-answer">
-            <p>To provide an accurate quote, we typically need the property address, county, approximate lot size (if known), the type of survey you need, and a brief description of why you need the survey (e.g., fence installation, property purchase, boundary dispute). The contact form includes all the necessary fields to gather this information.</p>
+            <p>To provide an accurate quote, we typically need the property address, county, approximate lot size (if known), the type of survey you need, and a brief description of why you need the survey (e.g., fence installation, property purchase, boundary dispute). Our contact form includes all the necessary fields to gather this information.</p>
           </div>
         </div>
       </div>
@@ -1197,7 +1215,7 @@
   <section class="contact" id="contact">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Contact Me</h2>
+        <h2 class="section-title">Contact Us</h2>
         <p class="section-subtitle">Get in touch for a free quote</p>
       </div>
       
@@ -1329,7 +1347,29 @@
       <div class="footer-container">
         <div class="footer-about">
           <div class="footer-logo">
-            <img src="/w3images/chesnutlandsurveying_websiteLogo.jpg" alt="Chesnut Land Surveying LLC Logo">
+            <div style="width: 90px; height: 90px; margin-right: 15px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" style="width: 100%; height: 100%;">
+                <circle cx="500" cy="450" r="400" fill="#003A5D"/>
+                <path d="M300 450 L400 250 L600 250 L700 450" fill="none" stroke="#003A5D" stroke-width="15"/>
+                <path d="M480 450 L590 200 L670 450" fill="none" stroke="#003A5D" stroke-width="15"/>
+                <path d="M150 800 Q500 750 850 800" fill="#5C7B1E"/>
+                <g transform="translate(475, 280) scale(0.6)">
+                  <path d="M40 50 L40 350 M-80 350 L160 350 M-40 50 L120 50" stroke="#FFFFFF" stroke-width="20" fill="none"/>
+                  <path d="M0 50 L0 350" stroke="#FFFFFF" stroke-width="30" fill="none"/>
+                  <rect x="-60" y="100" width="120" height="150" fill="#003A5D" stroke="#FFFFFF" stroke-width="10"/>
+                  <circle cx="0" cy="175" r="35" fill="#FFFFFF"/>
+                  <circle cx="0" cy="175" r="20" fill="none" stroke="#FFFFFF" stroke-width="5"/>
+                  <g transform="translate(0, 280)">
+                    <circle cx="-30" cy="0" r="8" fill="#FFFFFF"/>
+                    <circle cx="0" cy="0" r="8" fill="#FFFFFF"/>
+                    <circle cx="30" cy="0" r="8" fill="#FFFFFF"/>
+                    <circle cx="-30" cy="25" r="8" fill="#FFFFFF"/>
+                    <circle cx="0" cy="25" r="8" fill="#FFFFFF"/>
+                    <circle cx="30" cy="25" r="8" fill="#FFFFFF"/>
+                  </g>
+                </g>
+              </svg>
+            </div>
             <div>
               <h3 style="margin: 0;">Chesnut Land Surveying LLC</h3>
             </div>
@@ -1349,7 +1389,7 @@
         </div>
         
         <div class="footer-links">
-          <h3 class="footer-heading">Connect With Me</h3>
+          <h3 class="footer-heading">Connect With Us</h3>
           <ul>
             <li><a href="tel:2565573285"><i class="fas fa-phone"></i> 256-557-3285</a></li>
             <li><a href="mailto:chesnutsurveying@gmail.com"><i class="fas fa-envelope"></i> chesnutsurveying@gmail.com</a></li>
@@ -1360,7 +1400,7 @@
       </div>
       
       <div class="footer-bottom">
-        <p>&copy; 2025 Chesnut Land Surveying LLC. All rights reserved. | RLS #3378 | <a href="#">Privacy Policy</a></p>
+        <p>&copy; 2024 Chesnut Land Surveying LLC. All rights reserved. | RLS #3378 | <a href="#">Privacy Policy</a></p>
       </div>
     </div>
   </footer>

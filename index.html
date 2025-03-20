@@ -1426,25 +1426,17 @@
     
    // Form Validation with Visual Feedback
   const contactForm = document.getElementById('contact-form');
-  const hiddenIframe = document.getElementById('hidden-iframe');
   
   if (contactForm) {
-    // Track form submission through hidden iframe
-    hiddenIframe.addEventListener('load', function() {
-      // This will trigger when the form response loads in the iframe
-      // We can use this to reset our form and button
-      const submitButton = contactForm.querySelector('.form-submit');
-      if (submitButton) {
-        submitButton.innerHTML = 'Submit Request';
-        submitButton.disabled = false;
-      }
-    });
-    
     contactForm.addEventListener('submit', function(event) {
+      // Prevent form submission initially to validate
+      event.preventDefault();
+      
       let isValid = true;
       const formControls = this.querySelectorAll('.form-control');
       const submitButton = this.querySelector('.form-submit');
       
+      // Standard field validation
       formControls.forEach(control => {
         if (control.hasAttribute('required') && !control.value.trim()) {
           isValid = false;
@@ -1509,19 +1501,19 @@
         }
       }
       
-      if (!isValid) {
-        event.preventDefault();
-      } else {
+      if (isValid) {
         // Show loading indicator
         submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
         submitButton.disabled = true;
         
-        // Let the form submit naturally, but ensure we reset the button regardless
-        // This is a backup in case the iframe load event doesn't trigger
+        // If validation passes, manually submit the form
+        this.submit();
+        
+        // Reset the button after a delay
         setTimeout(function() {
           submitButton.innerHTML = 'Submit Request';
           submitButton.disabled = false;
-        }, 5000); // Reset after 5 seconds as a fallback
+        }, 2000);
       }
     });
     
@@ -1533,6 +1525,20 @@
         const errorMessage = this.parentNode.querySelector('.error-message');
         if (errorMessage) {
           errorMessage.remove();
+        }
+      });
+    });
+    
+    // Also clear validation errors when checkboxes are checked
+    const serviceCheckboxes = contactForm.querySelectorAll('input[name="surveys"]');
+    serviceCheckboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', function() {
+        if (this.checked) {
+          const servicesGroup = contactForm.querySelector('.form-group:nth-of-type(6)');
+          const existingError = servicesGroup.querySelector('.services-error');
+          if (existingError) {
+            existingError.remove();
+          }
         }
       });
     });

@@ -86,24 +86,13 @@
       align-items: center;
     }
     
-    /* Header logo fix */
     .logo img {
-      height: 90px; /* Increased significantly from 70px */
-      width: 90px; /* Keeping width equal to height */
-      margin-right: 15px; /* Increased margin for better spacing */
-      border-radius: 50%;
-      object-fit: contain; /* Changed from 'cover' to 'contain' to ensure no clipping */
-      background-color: white; /* Ensure background is white if image has transparency */
-      padding: 2px; /* Small padding to prevent edge content from touching the circle edge */
-      border: 2px solid var(--accent); /* Keep the border for definition */
-    }
-        
-    /* Improved spacing for better logo text alignment */
-    .logo-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin-left: 5px; /* Add a bit more space between the logo and text */
+      height: auto;
+      width: 90px;
+      margin-right: 15px;
+      border-radius: 0;
+      object-fit: contain;
+      max-height: 70px;
     }
     
     .logo-title {
@@ -733,10 +722,13 @@
       gap: 40px;
     }
     
-    .footer-logo {
-      display: flex;
-      align-items: center;
-      margin-bottom: 20px;
+    .footer-logo img {
+      height: auto;
+      width: 90px;
+      border-radius: 0;
+      margin-right: 15px;
+      object-fit: contain;
+      max-height: 70px;
     }
     
     /* Footer logo fix */

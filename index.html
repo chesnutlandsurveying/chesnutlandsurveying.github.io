@@ -1424,19 +1424,27 @@
       });
     });
     
-    // Form Validation with Visual Feedback
-    const contactForm = document.getElementById('contact-form');
+   // Form Validation with Visual Feedback
+  const contactForm = document.getElementById('contact-form');
+  const hiddenIframe = document.getElementById('hidden-iframe');
+  
+  if (contactForm) {
+    // Track form submission through hidden iframe
+    hiddenIframe.addEventListener('load', function() {
+      // This will trigger when the form response loads in the iframe
+      // We can use this to reset our form and button
+      const submitButton = contactForm.querySelector('.form-submit');
+      if (submitButton) {
+        submitButton.innerHTML = 'Submit Request';
+        submitButton.disabled = false;
+      }
+    });
     
-      if (contactForm) {
     contactForm.addEventListener('submit', function(event) {
-      // Prevent the default form submission
-      event.preventDefault();
-      
       let isValid = true;
       const formControls = this.querySelectorAll('.form-control');
       const submitButton = this.querySelector('.form-submit');
       
-      // Validation code remains the same
       formControls.forEach(control => {
         if (control.hasAttribute('required') && !control.value.trim()) {
           isValid = false;
@@ -1501,53 +1509,19 @@
         }
       }
       
-      if (isValid) {
+      if (!isValid) {
+        event.preventDefault();
+      } else {
         // Show loading indicator
         submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
         submitButton.disabled = true;
         
-        // Simple approach: Submit the real form in a new tab, then reset
-        // Create a new form element
-        const tempForm = document.createElement('form');
-        tempForm.action = contactForm.action;
-        tempForm.method = contactForm.method;
-        tempForm.enctype = contactForm.enctype;
-        tempForm.target = "_blank";
-        
-        // Copy all form values
-        const formData = new FormData(contactForm);
-        for (const [name, value] of formData.entries()) {
-          if (name === 'surveys') {
-            // Handle checkboxes differently as they can have multiple values
-            const checkboxes = contactForm.querySelectorAll(`input[name="${name}"]:checked`);
-            checkboxes.forEach(checkbox => {
-              const input = document.createElement('input');
-              input.type = 'hidden';
-              input.name = name;
-              input.value = checkbox.value;
-              tempForm.appendChild(input);
-            });
-          } else {
-            const input = document.createElement('input');
-            input.type = 'hidden';
-            input.name = name;
-            input.value = value;
-            tempForm.appendChild(input);
-          }
-        }
-        
-        // Append to body, submit, then remove
-        document.body.appendChild(tempForm);
-        tempForm.submit();
-        document.body.removeChild(tempForm);
-        
-        // Reset the button after a short delay
+        // Let the form submit naturally, but ensure we reset the button regardless
+        // This is a backup in case the iframe load event doesn't trigger
         setTimeout(function() {
           submitButton.innerHTML = 'Submit Request';
           submitButton.disabled = false;
-          // Optional: reset the form after submission
-          contactForm.reset();
-        }, 1000);
+        }, 5000); // Reset after 5 seconds as a fallback
       }
     });
     

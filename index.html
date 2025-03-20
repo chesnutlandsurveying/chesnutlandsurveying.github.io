@@ -1496,22 +1496,56 @@
           }
         }
         
-        if (!isValid) {
-          event.preventDefault();
-        } else {
-          // Show loading indicator
-          const submitButton = this.querySelector('.form-submit');
-          submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
-          submitButton.disabled = true;
-  
-          // Reset the button state after the form is submitted
-          // This will run after the form opens in a new tab
-          setTimeout(function() {
-            submitButton.innerHTML = 'Submit Request';
-            submitButton.disabled = false;
-          }, 2000); // Reset after 2 seconds
-        }
-      });
+       if (isValid) {
+        // Show loading indicator
+        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+        submitButton.disabled = true;
+        
+        // Create a new form data object
+        const formData = new FormData(this);
+        
+        // Open a new window/tab
+        const newWindow = window.open('about:blank', '_blank');
+        
+        // Submit the form data using fetch
+        fetch('https://formspree.io/f/mdoqgwkj', {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        })
+        .then(response => response.json())
+        .then(data => {
+          // If the form was submitted successfully, redirect the new window
+          if (data.ok) {
+            // Redirect the new window to the success page (Formspree typically has a success page)
+            newWindow.location = data.next || 'https://formspree.io/thanks';
+          } else {
+            // If there was an error, close the new window and show an error message
+            newWindow.close();
+            alert('There was a problem submitting the form. Please try again.');
+          }
+          
+          // Reset the form
+          contactForm.reset();
+          
+          // Reset the button
+          submitButton.innerHTML = 'Submit Request';
+          submitButton.disabled = false;
+        })
+        .catch(error => {
+          // If there was an error, close the new window and show an error message
+          newWindow.close();
+          console.error('Error:', error);
+          alert('There was a problem submitting the form. Please try again.');
+          
+          // Reset the button
+          submitButton.innerHTML = 'Submit Request';
+          submitButton.disabled = false;
+        });
+      }
+    });
       
       // Reset validation styling on input
       const formControls = contactForm.querySelectorAll('.form-control');

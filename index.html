@@ -1427,7 +1427,7 @@
     // Form Validation with Visual Feedback
     const contactForm = document.getElementById('contact-form');
     
-    if (contactForm) {
+      if (contactForm) {
     contactForm.addEventListener('submit', function(event) {
       // Prevent the default form submission
       event.preventDefault();
@@ -1436,6 +1436,7 @@
       const formControls = this.querySelectorAll('.form-control');
       const submitButton = this.querySelector('.form-submit');
       
+      // Validation code remains the same
       formControls.forEach(control => {
         if (control.hasAttribute('required') && !control.value.trim()) {
           isValid = false;
@@ -1505,49 +1506,48 @@
         submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
         submitButton.disabled = true;
         
-        // Create a new form data object
-        const formData = new FormData(this);
+        // Simple approach: Submit the real form in a new tab, then reset
+        // Create a new form element
+        const tempForm = document.createElement('form');
+        tempForm.action = contactForm.action;
+        tempForm.method = contactForm.method;
+        tempForm.enctype = contactForm.enctype;
+        tempForm.target = "_blank";
         
-        // Open a new window/tab
-        const newWindow = window.open('about:blank', '_blank');
-        
-        // Submit the form data using fetch
-        fetch('https://formspree.io/f/mdoqgwkj', {
-          method: 'POST',
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        })
-        .then(response => response.json())
-        .then(data => {
-          // If the form was submitted successfully, redirect the new window
-          if (data.ok) {
-            // Redirect the new window to the success page (Formspree typically has a success page)
-            newWindow.location = data.next || 'https://formspree.io/thanks';
+        // Copy all form values
+        const formData = new FormData(contactForm);
+        for (const [name, value] of formData.entries()) {
+          if (name === 'surveys') {
+            // Handle checkboxes differently as they can have multiple values
+            const checkboxes = contactForm.querySelectorAll(`input[name="${name}"]:checked`);
+            checkboxes.forEach(checkbox => {
+              const input = document.createElement('input');
+              input.type = 'hidden';
+              input.name = name;
+              input.value = checkbox.value;
+              tempForm.appendChild(input);
+            });
           } else {
-            // If there was an error, close the new window and show an error message
-            newWindow.close();
-            alert('There was a problem submitting the form. Please try again.');
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = name;
+            input.value = value;
+            tempForm.appendChild(input);
           }
-          
-          // Reset the form
+        }
+        
+        // Append to body, submit, then remove
+        document.body.appendChild(tempForm);
+        tempForm.submit();
+        document.body.removeChild(tempForm);
+        
+        // Reset the button after a short delay
+        setTimeout(function() {
+          submitButton.innerHTML = 'Submit Request';
+          submitButton.disabled = false;
+          // Optional: reset the form after submission
           contactForm.reset();
-          
-          // Reset the button
-          submitButton.innerHTML = 'Submit Request';
-          submitButton.disabled = false;
-        })
-        .catch(error => {
-          // If there was an error, close the new window and show an error message
-          newWindow.close();
-          console.error('Error:', error);
-          alert('There was a problem submitting the form. Please try again.');
-          
-          // Reset the button
-          submitButton.innerHTML = 'Submit Request';
-          submitButton.disabled = false;
-        });
+        }, 1000);
       }
     });
     

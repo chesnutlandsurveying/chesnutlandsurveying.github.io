@@ -1428,75 +1428,79 @@
     const contactForm = document.getElementById('contact-form');
     
     if (contactForm) {
-      contactForm.addEventListener('submit', function(event) {
-        let isValid = true;
-        const formControls = this.querySelectorAll('.form-control');
-        
-        formControls.forEach(control => {
-          if (control.hasAttribute('required') && !control.value.trim()) {
-            isValid = false;
-            control.style.borderColor = '#f44336';
-            
-            const errorMessage = document.createElement('p');
-            errorMessage.textContent = 'This field is required';
-            errorMessage.style.color = '#f44336';
-            errorMessage.style.fontSize = '12px';
-            errorMessage.style.marginTop = '5px';
-            
-            // Remove any existing error messages before adding a new one
-            const existingError = control.parentNode.querySelector('.error-message');
-            if (existingError) {
-              existingError.remove();
-            }
-            
-            errorMessage.className = 'error-message';
-            control.parentNode.appendChild(errorMessage);
-          } else {
-            control.style.borderColor = '';
-            const existingError = control.parentNode.querySelector('.error-message');
-            if (existingError) {
-              existingError.remove();
-            }
-          }
-        });
-        
-        // Check if at least one service is selected
-        const serviceCheckboxes = this.querySelectorAll('input[name="surveys"]');
-        let isServiceSelected = false;
-        
-        serviceCheckboxes.forEach(checkbox => {
-          if (checkbox.checked) {
-            isServiceSelected = true;
-          }
-        });
-        
-        if (!isServiceSelected) {
+    contactForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      
+      let isValid = true;
+      const formControls = this.querySelectorAll('.form-control');
+      const submitButton = this.querySelector('.form-submit');
+      
+      formControls.forEach(control => {
+        if (control.hasAttribute('required') && !control.value.trim()) {
           isValid = false;
-          const servicesGroup = this.querySelector('.form-group:nth-of-type(6)');
+          control.style.borderColor = '#f44336';
           
           const errorMessage = document.createElement('p');
-          errorMessage.textContent = 'Please select at least one service';
+          errorMessage.textContent = 'This field is required';
           errorMessage.style.color = '#f44336';
           errorMessage.style.fontSize = '12px';
           errorMessage.style.marginTop = '5px';
           
           // Remove any existing error messages before adding a new one
-          const existingError = servicesGroup.querySelector('.services-error');
+          const existingError = control.parentNode.querySelector('.error-message');
           if (existingError) {
             existingError.remove();
           }
           
-          errorMessage.className = 'services-error';
-          servicesGroup.appendChild(errorMessage);
+          errorMessage.className = 'error-message';
+          control.parentNode.appendChild(errorMessage);
         } else {
-          const servicesGroup = this.querySelector('.form-group:nth-of-type(6)');
-          const existingError = servicesGroup.querySelector('.services-error');
+          control.style.borderColor = '';
+          const existingError = control.parentNode.querySelector('.error-message');
           if (existingError) {
             existingError.remove();
           }
         }
+      });
+      
+      // Check if at least one service is selected
+      const serviceCheckboxes = this.querySelectorAll('input[name="surveys"]');
+      let isServiceSelected = false;
+      
+      serviceCheckboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+          isServiceSelected = true;
+        }
+      });
+      
+      if (!isServiceSelected) {
+        isValid = false;
+        const servicesGroup = this.querySelector('.form-group:nth-of-type(6)');
         
-       if (isValid) {
+        const errorMessage = document.createElement('p');
+        errorMessage.textContent = 'Please select at least one service';
+        errorMessage.style.color = '#f44336';
+        errorMessage.style.fontSize = '12px';
+        errorMessage.style.marginTop = '5px';
+        
+        // Remove any existing error messages before adding a new one
+        const existingError = servicesGroup.querySelector('.services-error');
+        if (existingError) {
+          existingError.remove();
+        }
+        
+        errorMessage.className = 'services-error';
+        servicesGroup.appendChild(errorMessage);
+      } else {
+        const servicesGroup = this.querySelector('.form-group:nth-of-type(6)');
+        const existingError = servicesGroup.querySelector('.services-error');
+        if (existingError) {
+          existingError.remove();
+        }
+      }
+      
+      if (isValid) {
         // Show loading indicator
         submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
         submitButton.disabled = true;
@@ -1546,19 +1550,19 @@
         });
       }
     });
-      
-      // Reset validation styling on input
-      const formControls = contactForm.querySelectorAll('.form-control');
-      formControls.forEach(control => {
-        control.addEventListener('input', function() {
-          this.style.borderColor = '';
-          const errorMessage = this.parentNode.querySelector('.error-message');
-          if (errorMessage) {
-            errorMessage.remove();
-          }
-        });
+    
+    // Reset validation styling on input
+    const formControls = contactForm.querySelectorAll('.form-control');
+    formControls.forEach(control => {
+      control.addEventListener('input', function() {
+        this.style.borderColor = '';
+        const errorMessage = this.parentNode.querySelector('.error-message');
+        if (errorMessage) {
+          errorMessage.remove();
+        }
       });
-    }
-  </script>
+    });
+  }
+</script>
 </body>
 </html>

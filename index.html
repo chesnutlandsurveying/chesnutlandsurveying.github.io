@@ -1240,7 +1240,7 @@
         
         <div class="contact-form">
           <h3>Request a Quote</h3>
-          <form action="https://formspree.io/f/mdoqgwkj" method="POST" enctype="multipart/form-data" id="contact-form">
+          <form action="https://formspree.io/f/mdoqgwkj" method="POST" enctype="multipart/form-data" id="contact-form" target="_blank">
             <div class="form-group">
               <label for="name">Full Name*</label>
               <input type="text" id="name" name="name" class="form-control" required>
@@ -1503,6 +1503,13 @@
           const submitButton = this.querySelector('.form-submit');
           submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
           submitButton.disabled = true;
+  
+          // Reset the button state after the form is submitted
+          // This will run after the form opens in a new tab
+          setTimeout(function() {
+            submitButton.innerHTML = 'Submit Request';
+            submitButton.disabled = false;
+          }, 2000); // Reset after 2 seconds
         }
       });
       

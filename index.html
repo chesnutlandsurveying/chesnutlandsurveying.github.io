@@ -76,7 +76,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 0;
+      padding: 15px 0; /* Increased padding to accommodate larger logo */
     }
     
     .logo {
@@ -86,19 +86,24 @@
       align-items: center;
     }
     
+    /* Header logo fix */
     .logo img {
-      height: 70px;
-      width: 70px;
-      margin-right: 10px;
+      height: 90px; /* Increased significantly from 70px */
+      width: 90px; /* Keeping width equal to height */
+      margin-right: 15px; /* Increased margin for better spacing */
       border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid var(--accent);
+      object-fit: contain; /* Changed from 'cover' to 'contain' to ensure no clipping */
+      background-color: white; /* Ensure background is white if image has transparency */
+      padding: 2px; /* Small padding to prevent edge content from touching the circle edge */
+      border: 2px solid var(--accent); /* Keep the border for definition */
     }
-    
+        
+    /* Improved spacing for better logo text alignment */
     .logo-text {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      margin-left: 5px; /* Add a bit more space between the logo and text */
     }
     
     .logo-title {
@@ -734,12 +739,15 @@
       margin-bottom: 20px;
     }
     
+    /* Footer logo fix */
     .footer-logo img {
-      width: 70px;
-      height: 70px;
+      width: 90px; /* Match the header size */
+      height: 90px;
       border-radius: 50%;
       margin-right: 15px;
-      object-fit: cover;
+      object-fit: contain;
+      background-color: white;
+      padding: 2px;
     }
     
     .footer-about p {

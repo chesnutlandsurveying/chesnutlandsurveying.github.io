@@ -711,6 +711,83 @@
       margin-top: 20px;
       font-weight: 500;
     }
+
+    /* NOT ACCEPTING WORK STYLES */
+    .not-accepting-notification {
+      background-color: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .not-accepting-notification .notification-icon {
+      font-size: 60px;
+      color: var(--warning);
+      margin-bottom: 20px;
+    }
+    
+    .not-accepting-notification h3 {
+      font-size: 28px;
+      color: var(--primary);
+      margin-bottom: 20px;
+      font-family: 'Protest Strike', sans-serif;
+    }
+    
+    .not-accepting-notification p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 15px;
+    }
+    
+    .not-accepting-notification .return-date {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--primary);
+      background-color: var(--accent);
+      padding: 15px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    
+    .not-accepting-notification .social-contact {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+    }
+    
+    .not-accepting-notification .social-contact p {
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+    
+/* TOGGLE SYSTEM */
+/* Change this class to switch between modes */
+/* Use 'accepting-work' to show normal contact form */
+/* Use 'not-accepting-work' to show notification */
+
+/* When NOT accepting work - hide normal contact, show notification */
+body.not-accepting-work .normal-contact {
+  display: none;
+}
+
+body.not-accepting-work .not-accepting-contact {
+  display: block;
+}
+
+/* When accepting work (default) - show normal contact, hide notification */
+body.accepting-work .not-accepting-contact,
+body:not(.not-accepting-work) .not-accepting-contact {
+  display: none;
+}
+    
+    /* Default state - accepting work */
+    .not-accepting-contact {
+      display: none;
+    }
     
     /* Footer */
     footer {
@@ -905,7 +982,15 @@
     }
   </style>
 </head>
-<body>
+
+
+  <!-- TOGGLE CONTROL: Change the class on the body tag above -->
+  <!-- Use "accepting-work" to show normal contact form -->
+  <!-- Like this: <body class="not-accepting-work"> -->
+  <!-- Use "not-accepting-work" to show notification -->
+<body class="not-accepting-work">
+
+
   <!-- Schema Markup for Local Business -->
   <script type="application/ld+json">
   {
@@ -1155,7 +1240,7 @@
           </div>
           <div class="faq-answer">
             <p>A boundary survey involves researching deeds and recorded plats, measuring the land using professional equipment, 
-              and locating or setting property corners. I’ll then prepare a map that shows the boundary lines, any monuments found or set, 
+              and locating or setting property corners. I'll then prepare a map that shows the boundary lines, any monuments found or set, 
               and other relevant features. If you're requesting stakes or flags in the field, I can do that too - just let me know up front.</p>
           </div>
         </div>
@@ -1187,8 +1272,8 @@
                   <li>Cross-check measurements to make sure everything fits</li>
                 </ul>
                 <br> <!-- Line break added here -->
-                <p>I can prioritize the area you’re most concerned about (like a fence or driveway), 
-                  but I still need to survey the full boundary to do it accurately. That’s why pricing reflects a complete boundary survey - not just one line.</p>
+                <p>I can prioritize the area you're most concerned about (like a fence or driveway), 
+                  but I still need to survey the full boundary to do it accurately. That's why pricing reflects a complete boundary survey - not just one line.</p>
           </div>
         </div>
         
@@ -1219,12 +1304,12 @@
 
         <div class="faq-item">
           <div class="faq-question">
-            <span>It’s been a few weeks - why haven’t I heard from you?</span>
+            <span>It's been a few weeks - why haven't I heard from you?</span>
             <i class="fas fa-chevron-down"></i>
           </div>
           <div class="faq-answer">
-            <p>I’m a one-person business, and I handle everything from field work to office work. If I haven’t reached out, 
-              it’s likely I’m still catching up from earlier projects. I appreciate your patience and promise that I haven’t forgotten about you.</p>
+            <p>I'm a one-person business, and I handle everything from field work to office work. If I haven't reached out, 
+              it's likely I'm still catching up from earlier projects. I appreciate your patience and promise that I haven't forgotten about you.</p>
           </div>
         </div>
 
@@ -1247,8 +1332,8 @@
           <div class="faq-answer">
             <p>No, but if utilities are marked before I arrive, I can locate visible markings (like paint or flags) 
               during the survey. For public utilities, call 811 or visit <a href="https://www.tenn811.com/">Tennessee811</a>
-              - it’s free. For private utilities (like lines to a shed or pool), you’ll need to hire a 
-              <a href="https://www.tenn811.com/private-locating-info">private locator.</a> Unmarked utilities won’t be picked up or shown on the survey.</p>
+              - it's free. For private utilities (like lines to a shed or pool), you'll need to hire a 
+              <a href="https://www.tenn811.com/private-locating-info">private locator.</a> Unmarked utilities won't be picked up or shown on the survey.</p>
           </div>
         </div>
         
@@ -1272,10 +1357,12 @@
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Contact</h2>
-        <p class="section-subtitle">Get in touch for a free quote</p>
+        <p class="section-subtitle normal-contact">Get in touch for a free quote</p>
+        <p class="section-subtitle not-accepting-contact">Currently not accepting new projects</p>
       </div>
       
-      <div class="contact-container">
+      <!-- NORMAL CONTACT CONTENT -->
+      <div class="contact-container normal-contact">
         <div class="contact-info">
           <h3>Get In Touch</h3>
           
@@ -1413,6 +1500,38 @@
           </form>
         </div>
       </div>
+
+      <!-- NOT ACCEPTING WORK NOTIFICATION -->
+      <div class="not-accepting-contact">
+        <div class="not-accepting-notification">
+          <div class="notification-icon">
+            <i class="fas fa-pause-circle"></i>
+          </div>
+          
+          <h3>Currently Not Accepting New Projects</h3>
+          
+          <p>Thank you for your interest in Chesnut Land Surveying LLC. Due to current project commitments and existing workload, I am temporarily not accepting new quote requests or projects.</p>
+          
+          <div class="return-date">
+            <i class="fas fa-calendar-alt"></i>
+            I plan to resume accepting new work in <strong>October 2025</strong>
+          </div>
+          
+          <p>I appreciate your understanding and patience. Please check back in October.</p>
+          
+          <div class="social-contact">
+            <p><strong>Stay connected:</strong></p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/chesnutsurveying/" target="_blank" aria-label="Facebook page">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/susanchesnut/" target="_blank" aria-label="LinkedIn profile">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   
@@ -1447,7 +1566,7 @@
         <div class="footer-links">
           <h3 class="footer-heading">Connect With Me</h3>
           <ul>
-            <li><a href="mailto:susan@chesnutsurveying.com"><i class="fas fa-envelope"></i> susan@chesnutsurveying.com</a></li>
+            <li class="normal-contact"><a href="mailto:susan@chesnutsurveying.com"><i class="fas fa-envelope"></i> susan@chesnutsurveying.com</a></li>
             <li><a href="https://www.facebook.com/chesnutsurveying/" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
             <li><a href="https://www.linkedin.com/in/susanchesnut/" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
           </ul>
@@ -1525,7 +1644,7 @@
    // Form Validation with Visual Feedback
   const contactForm = document.getElementById('contact-form');
   const formResponse = document.getElementById('form-response');
-  const responseMessage = formResponse.querySelector('.response-message');
+  const responseMessage = formResponse?.querySelector('.response-message');
   
   if (contactForm) {
     contactForm.addEventListener('submit', async function(event) {

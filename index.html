@@ -1479,6 +1479,22 @@ body:not(.not-accepting-work) .not-accepting-contact {
             </div>
             
             <div class="form-group">
+              <label>Are you having issues with your neighbor?*</label>
+              
+              <div class="checkbox-group">
+                <label>
+                  <input type="checkbox" name="neighbor_dispute" value="yes"> Yes
+                </label>
+              </div>
+              
+              <div class="checkbox-group">
+                <label>
+                  <input type="checkbox" name="neighbor_dispute" value="no"> No
+                </label>
+              </div>
+            </div>
+            
+            <div class="form-group">
               <label for="message">Additional Information</label>
               <textarea id="message" name="message" class="form-control" rows="4"></textarea>
             </div>
@@ -1508,7 +1524,7 @@ body:not(.not-accepting-work) .not-accepting-contact {
           
           <div class="return-date">
             <i class="fas fa-calendar-alt"></i>
-            Please check back later to see when I’ll be accepting new projects again.
+            Please check back later to see when I'll be accepting new projects again.
           </div>
           
          
@@ -1713,6 +1729,42 @@ body:not(.not-accepting-work) .not-accepting-contact {
         }
       }
       
+      // Check if exactly one neighbor dispute option is selected
+      const neighborCheckboxes = this.querySelectorAll('input[name="neighbor_dispute"]');
+      let neighborCheckCount = 0;
+      
+      neighborCheckboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+          neighborCheckCount++;
+        }
+      });
+      
+      if (neighborCheckCount !== 1) {
+        isValid = false;
+        const neighborGroup = this.querySelector('.form-group:nth-of-type(7)');
+        
+        const errorMessage = document.createElement('p');
+        errorMessage.textContent = 'Please select one option';
+        errorMessage.style.color = '#f44336';
+        errorMessage.style.fontSize = '12px';
+        errorMessage.style.marginTop = '5px';
+        
+        // Remove any existing error messages before adding a new one
+        const existingError = neighborGroup.querySelector('.neighbor-error');
+        if (existingError) {
+          existingError.remove();
+        }
+        
+        errorMessage.className = 'neighbor-error';
+        neighborGroup.appendChild(errorMessage);
+      } else {
+        const neighborGroup = this.querySelector('.form-group:nth-of-type(7)');
+        const existingError = neighborGroup.querySelector('.neighbor-error');
+        if (existingError) {
+          existingError.remove();
+        }
+      }
+      
       if (isValid) {
         // Show loading indicator
         submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
@@ -1745,6 +1797,13 @@ body:not(.not-accepting-work) .not-accepting-contact {
               .join('');
             formData.append('surveys', cleanValue);
           });
+
+          // Handle neighbor dispute checkbox
+          const neighborDispute = formData.get('neighbor_dispute');
+          formData.delete('neighbor_dispute');
+          if (neighborDispute === 'yes') {
+            formData.append('surveys', 'Dispute');
+          }
 
           // Clean up county name (remove spaces and special characters)
           const county = formData.get('county');
@@ -1811,13 +1870,26 @@ body:not(.not-accepting-work) .not-accepting-contact {
         }
       });
     });
+    
+    // Clear neighbor dispute validation errors when checkbox is checked
+    const neighborCheckboxes = contactForm.querySelectorAll('input[name="neighbor_dispute"]');
+    neighborCheckboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', function() {
+        // Uncheck other neighbor dispute checkbox
+        neighborCheckboxes.forEach(cb => {
+          if (cb !== this) {
+            cb.checked = false;
+          }
+        });
+        
+        const neighborGroup = contactForm.querySelector('.form-group:nth-of-type(7)');
+        const existingError = neighborGroup.querySelector('.neighbor-error');
+        if (existingError) {
+          existingError.remove();
+        }
+      });
+    });
   }
 </script>
 </body>
 </html>
-
-
-
-
-
-

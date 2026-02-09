@@ -764,13 +764,13 @@
       font-size: 14px;
     }
     
-/* TOGGLE SYSTEM */
+/* TOGGLE SYSTEM - don't change this one*/ 
 /* Change this class to switch between modes */
 /* Use 'accepting-work' to show normal contact form */
 /* Use 'not-accepting-work' to show notification */
 
 /* When NOT accepting work - hide normal contact, show notification */
-body.accepting-work .normal-contact {
+body.not-accepting-work .normal-contact {
   display: none;
 }
 
@@ -988,7 +988,8 @@ body:not(.not-accepting-work) .not-accepting-contact {
   <!-- Use "accepting-work" to show normal contact form -->
   <!-- Like this: <body class="not-accepting-work"> -->
   <!-- Use "not-accepting-work" to show notification -->
-<body class="not-accepting-work">
+  <!-- CHANGE ME - TOGGLE - UPDATE - -->
+<body class="accepting-work">
 
 
   <!-- Schema Markup for Local Business -->
@@ -1889,6 +1890,7 @@ body:not(.not-accepting-work) .not-accepting-contact {
 </script>
 </body>
 </html>
+
 
 
 

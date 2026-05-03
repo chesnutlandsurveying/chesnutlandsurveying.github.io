@@ -54,4 +54,1039 @@
       background-color: var(--light);
     }
     
-    .contai
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Header & Navigation */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(27, 73, 101, 0.95);
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+    
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+    }
+    
+    .logo {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo img {
+      height: 60px;
+      margin-right: 10px;
+    }
+    
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .logo-title {
+      font-family: 'Protest Strike', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    
+    .logo-subtitle {
+      font-size: 16px;
+      font-weight: 400;
+    }
+    
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    
+    nav li {
+      margin-left: 30px;
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      padding: 10px 0;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    
+    nav a:hover {
+      color: var(--accent);
+    }
+    
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--accent);
+      transition: width 0.3s ease;
+    }
+    
+    nav a:hover::after {
+      width: 100%;
+    }
+    
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+    }
+    
+    .hamburger span {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background-color: white;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+    
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/w3images/banner3.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding-top: 80px;
+    }
+    
+    .hero-content {
+      max-width: 800px;
+    }
+    
+    .hero h1 {
+      font-family: 'Protest Strike', sans-serif;
+      font-size: 64px;
+      margin-bottom: 20px;
+      line-height: 1.1;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      color: white;
+    }
+    
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: var(--secondary);
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+    
+    .btn:hover {
+      background-color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    
+    .btn-primary {
+      background-color: var(--primary);
+    }
+    
+    /* About Section */
+    section {
+      padding: 80px 0;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    
+    .section-title {
+      font-family: 'Protest Strike', sans-serif;
+      font-size: 42px;
+      color: var(--primary);
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: var(--secondary);
+    }
+    
+    .section-subtitle {
+      font-size: 18px;
+      color: #666;
+    }
+    
+    .about-container {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+    
+    .about-image {
+      flex: 1;
+    }
+    
+    .about-image img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .about-content {
+      flex: 1;
+    }
+    
+    .about-content h3 {
+      font-size: 28px;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+    
+    .about-content p {
+      margin-bottom: 15px;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+    
+    .about-info {
+      margin-top: 30px;
+    }
+    
+    .info-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    
+    .info-item i {
+      min-width: 40px;
+      height: 40px;
+      background-color: var(--accent);
+      border-radius: 50%;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+    }
+    
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .social-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--primary);
+      color: white;
+      transition: all 0.3s ease;
+    }
+    
+    .social-icons a:hover {
+      background-color: var(--secondary);
+      transform: translateY(-3px);
+    }
+    
+    /* Services Section */
+    .services {
+      background-color: var(--accent);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .service-card {
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+    
+    .service-icon {
+      height: 100px;
+      background-color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .service-icon i {
+      font-size: 40px;
+      color: white;
+    }
+    
+    .service-content {
+      padding: 25px;
+    }
+    
+    .service-content h3 {
+      font-size: 20px;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+    
+    .service-content p {
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+    
+    .counties-served {
+      background-color: var(--light);
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 40px;
+    }
+    
+    .counties-served h3 {
+      font-size: 20px;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+    
+    .counties-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .county-tag {
+      background-color: var(--secondary);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+    
+    /* FAQ Section */
+    .faq {
+      background-color: var(--light);
+    }
+    
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .faq-item {
+      background-color: white;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--primary);
+    }
+    
+    .faq-question i {
+      transition: all 0.3s ease;
+    }
+    
+    .faq-answer {
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .faq-answer p {
+      padding-bottom: 20px;
+    }
+    
+    .faq-item.active .faq-question {
+      background-color: rgba(95, 168, 211, 0.1);
+    }
+    
+    .faq-item.active .faq-question i {
+      transform: rotate(180deg);
+    }
+    
+    .faq-item.active .faq-answer {
+      max-height: 1000px;
+    }
+    
+    /* Contact Section */
+    .contact {
+      background-color: var(--primary);
+      color: white;
+    }
+    
+    .contact .section-title {
+      color: white;
+    }
+    
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+    
+    .contact-info h3 {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+    
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 25px;
+    }
+    
+    .contact-detail i {
+      font-size: 22px;
+      margin-right: 15px;
+      margin-top: 5px;
+      color: var(--accent);
+    }
+    
+    .contact-detail-content p, .contact-detail-content a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+    }
+    
+    .contact-form {
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .contact-form h3 {
+      font-size: 24px;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+      position: relative;
+    }
+    
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: #333;
+      font-weight: 500;
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    .checkbox-group {
+      margin-bottom: 8px;
+    }
+    
+    .checkbox-group label {
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    
+    .checkbox-group input[type="checkbox"] {
+      margin-right: 8px;
+    }
+    
+    .checkbox-note {
+      font-size: 12px;
+      color: #666;
+      margin-left: 24px;
+    }
+    
+    .form-submit {
+      width: 100%;
+      padding: 12px;
+      background-color: var(--primary);
+      border: none;
+      border-radius: 4px;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .form-submit:hover {
+      background-color: var(--secondary);
+    }
+    
+    .availability-note {
+      background-color: var(--warning);
+      color: #333;
+      padding: 15px;
+      border-radius: 4px;
+      margin-top: 20px;
+      font-weight: 500;
+    }
+
+    /* Toggle visibility for accepting/not accepting work */
+    body.not-accepting-work .normal-contact { display: none; }
+    body.not-accepting-work .not-accepting-contact { display: block; }
+    body.accepting-work .not-accepting-contact { display: none; }
+    body.accepting-work .normal-contact { display: grid; }
+
+    .not-accepting-notification {
+      background-color: white;
+      padding: 40px;
+      border-radius: 8px;
+      text-align: center;
+      color: #333;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--dark);
+      color: white;
+      padding: 60px 0 30px;
+    }
+    
+    .footer-container {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+    }
+    
+    .footer-logo img {
+      width: 60px;
+      height: 60px;
+      margin-right: 15px;
+    }
+    
+    .footer-bottom {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background-color: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 99;
+    }
+    
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Error Text Styling */
+    .error-msg-red {
+      color: #f44336;
+      font-size: 13px;
+      margin-top: 10px;
+      font-weight: 600;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      nav {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+      nav.active { max-height: 300px; }
+      nav ul { flex-direction: column; padding: 20px; }
+      nav li { margin: 10px 0; }
+      .contact-container { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 44px; }
+    }
+  </style>
+</head>
+
+<body class="accepting-work">
+
+  <!-- Header & Navigation -->
+  <header>
+    <div class="container header-container">
+      <a href="#" class="logo">
+        <img src="/w3images/chesnutlandsurveyingLLC_logo.jpg" alt="Chesnut Land Surveying Logo">
+        <div class="logo-text">
+          <span class="logo-title">Chesnut</span>
+          <span class="logo-subtitle">Land Surveying LLC</span>
+        </div>
+      </a>
+      
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <nav id="nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#faqs">FAQs</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container hero-content">
+      <h1>Professional Land Surveying Services</h1>
+      <p>Accurate, reliable, and professional surveying services across Nashville and Middle Tennessee.</p>
+      <div>
+        <a href="#contact" class="btn btn-primary">Request a Quote</a>
+        <a href="#services" class="btn btn-outline">My Services</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="about-container">
+        <div class="about-image">
+          <img src="/w3images/website_photo_cropped.jpg" alt="Susan Chesnut, Registered Land Surveyor">
+        </div>
+        <div class="about-content">
+          <h3>Susan Chesnut, RLS #3378</h3>
+          <p>As a Registered Land Surveyor in Tennessee, I bring professionalism and attention to detail to every project. From in-depth research to precise fieldwork, I deliver results that exceed expectations.</p>
+          <div class="about-info">
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <p><a href="mailto:susan@chesnutsurveying.com" style="color: var(--primary);">susan@chesnutsurveying.com</a></p>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>Serving Nashville and Middle Tennessee</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Services</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-map-marked-alt"></i></div>
+          <div class="service-content">
+            <h3>Boundary Surveys</h3>
+            <p>Comprehensive boundary retracement surveys including historical research and precise measurements.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-ruler-combined"></i></div>
+          <div class="service-content">
+            <h3>Property Line Staking</h3>
+            <p>Visual reference stakes placed along your lines—perfect for fence installation or construction.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-layer-group"></i></div>
+          <div class="service-content">
+            <h3>Soil Grid Map</h3>
+            <p>Locating designated testing areas for soil scientists to analyze septic suitability.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-mountain"></i></div>
+          <div class="service-content">
+            <h3>Topographic Surveys</h3>
+            <p>Mapping elevations and features, essential for planning drainage or landscaping design.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq" id="faqs">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">FAQs</h2>
+      </div>
+      <div class="faq-container">
+        <div class="faq-item active">
+          <div class="faq-question"><span>How long does a survey take?</span><i class="fas fa-chevron-down"></i></div>
+          <div class="faq-answer"><p>Fieldwork usually takes 1-2 days, with 1-2 weeks for research and drafting.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question"><span>Can I get just one line marked?</span><i class="fas fa-chevron-down"></i></div>
+          <div class="faq-answer"><p>I must verify the entire boundary to accurately and defensibly mark even a single line.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Contact</h2>
+      </div>
+      
+      <!-- Normal Contact Form -->
+      <div class="contact-container normal-contact">
+        <div class="contact-info">
+          <h3>Get In Touch</h3>
+          <div class="contact-detail">
+            <i class="fas fa-envelope"></i>
+            <div class="contact-detail-content">
+              <h4>Email</h4>
+              <p><a href="mailto:susan@chesnutsurveying.com">susan@chesnutsurveying.com</a></p>
+            </div>
+          </div>
+          <div class="availability-note">
+            <i class="fas fa-info-circle"></i> <strong>Note:</strong> Now booking for June 2026. 
+            Quote turnaround is currently about 4 weeks. 
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h3>Request a Quote</h3>
+          <form action="https://forms-api.bryceamacker.com" method="POST" id="contact-form">
+            <div class="form-group">
+              <label for="name">Full Name*</label>
+              <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number*</label>
+              <input type="tel" id="phone" name="phone" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address*</label>
+              <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="county">County*</label>
+              <select id="county" name="county" class="form-control" required>
+                <option value="">Select a County</option>
+                <option value="Cheatham">Cheatham</option>
+                <option value="Davidson">Davidson</option>
+                <option value="Robertson">Robertson</option>
+                <option value="Sumner">Sumner</option>
+                <option value="Williamson">Williamson</option>
+                <option value="Wilson">Wilson</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="address">Property Address*</label>
+              <input type="text" id="address" name="address" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="zipcode">ZIP Code</label>
+              <input type="text" id="zipcode" name="zipcode" class="form-control" maxlength="5">
+            </div>
+            
+            <div class="form-group">
+              <label>Services Needed*</label>
+              <div class="checkbox-group"><label><input type="checkbox" name="surveys" value="Boundary"> Boundary Survey</label></div>
+              <div class="checkbox-group"><label><input type="checkbox" name="surveys" value="LineStaking"> Line Staking</label></div>
+              <div class="checkbox-group"><label><input type="checkbox" name="surveys" value="SoilGrid"> Soil Grid Map</label></div>
+              <div class="checkbox-group"><label><input type="checkbox" name="surveys" value="Topographic"> Topographic Survey</label></div>
+            </div>
+            
+            <div class="form-group">
+              <label>Are you having issues with your neighbor?*</label>
+              <div class="checkbox-group"><label><input type="checkbox" name="neighbor_dispute" value="yes"> Yes</label></div>
+              <div class="checkbox-group"><label><input type="checkbox" name="neighbor_dispute" value="no"> No</label></div>
+            </div>
+
+            <div class="form-group acknowledge-group">
+              <label>I understand that as a solo practitioner, Susan’s current turnaround for a quote is approximately 4 weeks. I am comfortable with this timeline and would like to be added to her queue.*</label>
+              <div class="checkbox-group"><label><input type="checkbox" name="acknowledge_wait" value="agree"> I agree and understand.</label></div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Additional Information</label>
+              <textarea id="message" name="message" class="form-control" rows="4"></textarea>
+            </div>
+            
+            <button type="submit" class="form-submit">Submit Request</button>
+            <div id="form-response" style="margin-top: 15px; padding: 10px; border-radius: 4px; display: none;">
+              <p class="response-message"></p>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Paused Notification -->
+      <div class="not-accepting-contact">
+        <div class="not-accepting-notification">
+          <h3>Notice: Quote Requests Temporarily Paused</h3>
+          <p>I am currently focusing on my backlog. New requests will reopen soon!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2024 Chesnut Land Surveying LLC | RLS #3378</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+  <script>
+    // --- BASIC UI LOGIC ---
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+    hamburger.addEventListener('click', () => nav.classList.toggle('active'));
+
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      item.querySelector('.faq-question').addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        faqItems.forEach(faq => faq.classList.remove('active'));
+        if (!isActive) item.classList.add('active');
+      });
+    });
+
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) backToTopBtn.classList.add('visible');
+      else backToTopBtn.classList.remove('visible');
+    });
+
+    backToTopBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // --- FORM VALIDATION & AUTO-SCROLL ---
+    const contactForm = document.getElementById('contact-form');
+    const formResponse = document.getElementById('form-response');
+    const responseMessage = formResponse?.querySelector('.response-message');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', async function(event) {
+        event.preventDefault();
+        
+        let isValid = true;
+        let firstInvalidElement = null; 
+        const submitButton = this.querySelector('.form-submit');
+        
+        const handleError = (container, message, className) => {
+            isValid = false;
+            addErrorMessage(container, message, className);
+            if (!firstInvalidElement) firstInvalidElement = container;
+        };
+
+        // 1. Standard Fields
+        const requiredInputs = this.querySelectorAll('.form-control[required]');
+        requiredInputs.forEach(input => {
+          const group = input.closest('.form-group');
+          if (!input.value.trim()) {
+            input.style.borderColor = '#f44336';
+            handleError(group, 'This field is required', 'error-message');
+          } else {
+            input.style.borderColor = '';
+            removeErrorMessage(group, 'error-message');
+          }
+        });
+        
+        // 2. Services Checkboxes
+        const serviceCheckboxes = this.querySelectorAll('input[name="surveys"]');
+        const servicesGroup = serviceCheckboxes[0].closest('.form-group');
+        let isServiceSelected = Array.from(serviceCheckboxes).some(cb => cb.checked);
+        if (!isServiceSelected) handleError(servicesGroup, 'Please select at least one service', 'services-error');
+        else removeErrorMessage(servicesGroup, 'services-error');
+        
+        // 3. Neighbor Dispute
+        const neighborCheckboxes = this.querySelectorAll('input[name="neighbor_dispute"]');
+        const neighborGroup = neighborCheckboxes[0].closest('.form-group');
+        let neighborCheckCount = Array.from(neighborCheckboxes).filter(cb => cb.checked).length;
+        if (neighborCheckCount !== 1) handleError(neighborGroup, 'Please select Yes or No', 'neighbor-error');
+        else removeErrorMessage(neighborGroup, 'neighbor-error');
+
+        // 4. Acknowledgement
+        const acknowledgeCheckbox = this.querySelector('input[name="acknowledge_wait"]');
+        const acknowledgeGroup = acknowledgeCheckbox.closest('.form-group');
+        if (!acknowledgeCheckbox.checked) handleError(acknowledgeGroup, 'You must agree to the timeline to proceed', 'ack-error');
+        else removeErrorMessage(acknowledgeGroup, 'ack-error');
+        
+        // SCROLL TO FIRST ERROR
+        if (!isValid && firstInvalidElement) {
+          firstInvalidElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          return; 
+        }
+
+        // SUBMISSION
+        if (isValid) {
+          submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+          submitButton.disabled = true;
+          
+          try {
+            const formData = new FormData(this);
+            const zipcode = formData.get('zipcode');
+            if (zipcode) {
+              const addr = formData.get('address');
+              formData.set('address', `${addr}, ${zipcode}`);
+            }
+            formData.delete('zipcode');
+
+            // Format Jira Labels
+            const surveyValues = formData.getAll('surveys');
+            formData.delete('surveys');
+            surveyValues.forEach(value => {
+              const clean = value.replace(/[^a-zA-Z0-9\s]/g, '').split(/\s+/).map(w => w.charAt(0).toUpperCase() + w.slice(1)).join('');
+              formData.append('surveys', clean);
+            });
+
+            if (formData.get('neighbor_dispute') === 'yes') formData.append('surveys', 'Dispute');
+            formData.delete('neighbor_dispute');
+
+            const county = formData.get('county');
+            if (county) formData.set('county', county.replace(/[^a-zA-Z0-9]/g, ''));
+            
+            const response = await fetch('https://forms-api.bryceamacker.com', {
+              method: 'POST',
+              body: formData
+            });
+            
+            const result = await response.json();
+            formResponse.style.display = 'block';
+            if (result.success) {
+              formResponse.style.backgroundColor = 'var(--success)';
+              responseMessage.style.color = 'white';
+              responseMessage.textContent = 'Request submitted successfully.';
+              this.reset();
+            } else {
+              formResponse.style.backgroundColor = '#f44336';
+              responseMessage.textContent = 'Error. Please try again.';
+            }
+          } catch (error) {
+            formResponse.style.display = 'block';
+            formResponse.style.backgroundColor = '#f44336';
+            responseMessage.textContent = 'Network error.';
+          } finally {
+            submitButton.innerHTML = 'Submit Request';
+            submitButton.disabled = false;
+          }
+        }
+      });
+
+      // Real-time error removal
+      contactForm.querySelector('input[name="acknowledge_wait"]').addEventListener('change', function() {
+        if(this.checked) removeErrorMessage(this.closest('.form-group'), 'ack-error');
+      });
+
+      const neighborCBs = contactForm.querySelectorAll('input[name="neighbor_dispute"]');
+      neighborCBs.forEach(cb => {
+        cb.addEventListener('change', function() {
+          neighborCBs.forEach(other => { if(other !== this) other.checked = false; });
+          removeErrorMessage(this.closest('.form-group'), 'neighbor-error');
+        });
+      });
+
+      // HELPERS
+      function addErrorMessage(parent, text, className) {
+        if (!parent.querySelector('.' + className)) {
+          const err = document.createElement('p');
+          err.className = className + ' error-msg-red';
+          err.textContent = text;
+          parent.appendChild(err);
+        }
+      }
+
+      function removeErrorMessage(parent, className) {
+        const err = parent.querySelector('.' + className);
+        if (err) err.remove();
+      }
+    }
+  </script>
+</body>
+</html>

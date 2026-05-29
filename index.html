@@ -977,7 +977,7 @@
           <div class="service-icon"><i class="fas fa-map-marked-alt"></i></div>
           <div class="service-content">
             <h3>Boundary Surveys</h3>
-            <p>My comprehensive boundary retracement surveys include thorough research of historical records, careful verification of boundaries, and precise measurements using professional-grade equipment. Each survey comes with a detailed map that clearly defines your property lines.</p>
+            <p><strong>As a solo-practitioner, I specialize in residential tracts of 10 acres or less.</strong> This focus allows me to provide the high level of personal attention and accuracy your property deserves. My comprehensive boundary retracements include thorough historical research, careful verification, and precise measurements using professional-grade equipment. Each survey includes a detailed map clearly defining your property lines.</p>
             <a href="#contact" class="btn btn-primary">Request Quote</a>
           </div>
         </div>
@@ -1225,15 +1225,38 @@
             </div>
             
             <div class="form-group">
-              <label>Services Needed (All services come with a Survey Map)*</label>
-              <div class="checkbox-group"><label><input type="checkbox" name="surveys" value="Boundary"> Boundary Survey</label></div>
-              <div class="checkbox-group">
-                <label><input type="checkbox" name="surveys" value="LineStaking"> Line Staking</label>
-                <p class="checkbox-note">This is an add-on to a Boundary Survey where wooden stakes will be placed along the boundary lines</p>
+              <label><strong>Survey Services</strong> (A Boundary Survey is required for all projects)*</label>
+              
+              <div class="checkbox-group main-service">
+                <label>
+                  <input type="checkbox" name="surveys" value="Boundary" checked onclick="return false;"> 
+                    <strong>Boundary Survey</strong> (Required - Tracts 10 acres or less)
+                </label>
               </div>
-              <div class="checkbox-group"><label><input type="checkbox" name="surveys" value="SoilGrid"> Soil Grid Map</label></div>
-              <div class="checkbox-group"><label><input type="checkbox" name="surveys" value="Topographic"> Topographic Survey</label></div>
+              
+              <div class="add-on-group" style="margin-left: 20px; border-left: 2px solid #ddd; padding-left: 15px;">
+                <p style="font-size: 0.9em; color: #666; margin-bottom: 10px;"><em>Select optional add-ons:</em></p>
+    
+                <!-- Add-on 1 -->
+                <div class="checkbox-group">
+                  <label><input type="checkbox" name="surveys" value="LineStaking"> Property Line Staking</label>
+                  <p class="checkbox-note">Temporary wooden stakes placed along the lines between corners.</p>
+                </div>
+
+                <!-- Add-on 2 -->
+                <div class="checkbox-group">
+                  <label><input type="checkbox" name="surveys" value="SoilGrid"> Soil Grid Map</label>
+                  <p class="checkbox-note">Staked 50' or 100' grid for septic analysis by a soil scientist.</p>
+                </div>
+            
+                <!-- Add-on 3 -->
+                <div class="checkbox-group">
+                  <label><input type="checkbox" name="surveys" value="Topographic">Topographic Survey (Tracts less than 3 acres)</label>
+                  <p class="checkbox-note">Mapping of land elevations and contours.</p>
+                </div>
+                
             </div>
+          </div>
             
             <div class="form-group">
               <label>Are you having issues with your neighbor?*</label>

@@ -819,6 +819,55 @@
       font-weight: 600;
       display: block;
     }
+
+    /* 1. The Section Container */
+    .surveys-section {
+        margin-top: 25px; /* Adds space between ZIP Code and this section */
+    }
+    
+    /* 2. The Top Header (Survey Services) */
+    .group-title {
+        display: block;
+        font-weight: bold;
+        font-size: 1.1rem;
+        margin-bottom: 15px !important; /* Forces space between this and the first checkbox */
+        color: #333;
+    }
+    
+    .group-title span {
+        font-weight: normal;
+        font-size: 0.9rem;
+        color: #666;
+        margin-left: 5px;
+    }
+    
+    /* 3. The Boundary Survey Row */
+    .main-service-row {
+        display: flex;
+        align-items: center; /* Centers checkbox with text */
+        gap: 10px; /* Modern way to add space between checkbox and label */
+        margin-bottom: 8px;
+    }
+    
+    .main-label {
+        font-weight: bold;
+        font-size: 1rem;
+        margin: 0; /* Removes default label margins */
+    }
+    
+    .required-note {
+        font-weight: normal;
+        color: #888;
+        font-size: 0.9rem;
+        margin-left: 4px; /* Fixes the "no space" issue */
+    }
+    
+    /* 4. The Indented Line */
+    .add-on-group {
+        margin-left: 32px; /* Aligns the vertical line with the text above */
+        border-left: 2px solid #ddd;
+        padding-left: 15px;
+    }
     
     /* Responsive Styles */
     @media (max-width: 992px) {
@@ -1225,16 +1274,17 @@
             </div>
             
             <div class="form-group surveys-section">
-              <label class="group-label"><strong>Survey Services</strong> (A Boundary Survey is required and a PDF map is provided for all projects)*</label>
+              <label class="group-label"><strong>Survey Services</strong> (All projects require a Boundary Survey & include a PDF map)*</label>
               
               <div class="checkbox-group main-service">
                   <input type="checkbox" name="surveys" value="Boundary" checked onclick="return false;"> 
-                  <label><strong>Boundary Survey</strong> <span class="text-muted">(Only tracts 10 acres or less)</span>
+                  <label><strong>Boundary Survey</strong> (Only tracts 10 acres or less)</label>
               </div>
+              <p class="deliverable-hint"><em>*A certified PDF map is included with every survey.</em></p>
               
-              <div class="add-on-group" style="margin-left: 20px; border-left: 2px solid #ddd; padding-left: 15px;">
-                <p style="font-size: 0.9em; color: #666; margin-bottom: 10px;"><em>Select optional add-ons:</em></p>
-    
+              <div class="add-on-group">
+                 <p class="add-on-header"><em>Select optional add-ons:</em></p>
+                
                 <!-- Add-on 1 -->
                 <div class="checkbox-group">
                   <label><input type="checkbox" name="surveys" value="LineStaking"> Property Line Staking</label>

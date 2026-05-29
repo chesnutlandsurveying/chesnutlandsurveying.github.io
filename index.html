@@ -417,6 +417,28 @@
       font-size: 15px;
       margin-bottom: 20px;
     }
+
+    /* Makes the 'Not Provided' card look distinct (e.g., light gray background) */
+    .service-not-provided {
+        background-color: #f8f9fa; 
+        border: 1px solid #dee2e6;
+    }
+    
+    .service-not-provided h3 {
+        color: #dc3545; /* Optional: Makes the header a 'warning' red */
+    }
+    
+    .not-provided-list {
+        text-align: left;
+        padding-left: 20px;
+        margin-top: 15px;
+    }
+
+    .not-provided-list li {
+        margin-bottom: 8px;
+        list-style-type: disc;
+        color: #6c757d;
+    }
     
     .counties-served {
       background-color: var(--light);
@@ -941,7 +963,7 @@
     </div>
   </section>
   
-  <!-- Services Section -->
+<!-- Services Section -->
   <section class="services" id="services">
     <div class="container">
       <div class="section-header">
@@ -950,6 +972,7 @@
       </div>
       
       <div class="services-grid">
+        <!-- Card 1 -->
         <div class="service-card">
           <div class="service-icon"><i class="fas fa-map-marked-alt"></i></div>
           <div class="service-content">
@@ -959,6 +982,7 @@
           </div>
         </div>
         
+        <!-- Card 2 -->
         <div class="service-card">
           <div class="service-icon"><i class="fas fa-ruler-combined"></i></div>
           <div class="service-content">
@@ -968,6 +992,7 @@
           </div>
         </div>
         
+        <!-- Card 3 -->
         <div class="service-card">
           <div class="service-icon"><i class="fas fa-layer-group"></i></div>
           <div class="service-content">
@@ -977,6 +1002,7 @@
           </div>
         </div>
         
+        <!-- Card 4 -->
         <div class="service-card">
           <div class="service-icon"><i class="fas fa-mountain"></i></div>
           <div class="service-content">
@@ -985,21 +1011,27 @@
             <a href="#contact" class="btn btn-primary">Request Quote</a>
           </div>
         </div>
-      </div>
 
-      <div class="service-card">
-          <div class="service-icon"><i class="fas fa-mountain"></i></div>
+        <!-- Card 5: SERVICES NOT PROVIDED (Now inside the grid) -->
+        <div class="service-card service-not-provided">
+          <div class="service-icon"><i class="fas fa-ban"></i></div>
           <div class="service-content">
             <h3><strong>SERVICES NOT PROVIDED</strong></h3>
-            <ul>
+            <p>To maintain a high level of accuracy and personal service, I do not offer the following:</p>
+            <ul class="not-provided-list">
               <li>Subdividing or lot divisions</li>
-              <li>Engineering projects (stormwater drainage, grading, etc)</li>
+              <li>Engineering projects (stormwater, drainage, etc)</li>
               <li>Construction Staking</li>
-              <li>Site Plans</li>
+              <li>ALTA/NSPS Land Title Surveys</li>
+              <li>Site Plans</li>              
             </ul>
           </div>
         </div>
-      </div>
+      </div> <!-- End of services-grid -->
+    </div> <!-- End of container -->
+  </section>
+
+
       
       <div class="counties-served">
         <h3>Areas I Serve</h3>

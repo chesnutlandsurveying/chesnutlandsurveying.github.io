@@ -820,53 +820,86 @@
       display: block;
     }
 
-    /* 1. The Section Container */
     .surveys-section {
-        margin-top: 25px; /* Adds space between ZIP Code and this section */
+        margin-top: 30px;
     }
-    
-    /* 2. The Top Header (Survey Services) */
+
+    /* The top "Survey Services" label */
     .group-title {
         display: block;
         font-weight: bold;
         font-size: 1.1rem;
-        margin-bottom: 15px !important; /* Forces space between this and the first checkbox */
+        margin-bottom: 12px !important; /* Space above the checkbox */
         color: #333;
     }
     
-    .group-title span {
+    .header-requirement {
         font-weight: normal;
-        font-size: 0.9rem;
-        color: #666;
-        margin-left: 5px;
+        font-size: 0.85rem;
+        color: #d9534f; /* A subtle dark red to emphasize the requirement */
+        display: block; /* Moves it to its own line if the screen is narrow */
+        margin-top: 2px;
     }
     
-    /* 3. The Boundary Survey Row */
+    /* The Boundary Survey Row */
     .main-service-row {
         display: flex;
-        align-items: center; /* Centers checkbox with text */
-        gap: 10px; /* Modern way to add space between checkbox and label */
-        margin-bottom: 8px;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 2px;
     }
     
     .main-label {
         font-weight: bold;
         font-size: 1rem;
-        margin: 0; /* Removes default label margins */
+        margin: 0;
     }
     
     .required-note {
         font-weight: normal;
-        color: #888;
+        color: #777;
         font-size: 0.9rem;
-        margin-left: 4px; /* Fixes the "no space" issue */
     }
     
-    /* 4. The Indented Line */
+    /* The PDF Map Note */
+    .deliverable-hint {
+        font-size: 0.8rem;
+        color: #003366; /* Your brand blue */
+        margin-left: 26px; /* Aligns under the text, past the checkbox */
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+    
+    /* The Vertical Line / Indented section */
     .add-on-group {
-        margin-left: 32px; /* Aligns the vertical line with the text above */
-        border-left: 2px solid #ddd;
-        padding-left: 15px;
+        margin-left: 32px;
+        border-left: 2px solid #e0e0e0;
+        padding-left: 18px;
+        margin-top: 10px;
+    }
+    
+    .add-on-header {
+        font-size: 0.85rem;
+        font-style: italic;
+        color: #666;
+        margin-bottom: 15px;
+    }
+    
+    .checkbox-item {
+        margin-bottom: 18px;
+    }
+    
+    .checkbox-item label {
+        display: block;
+        font-weight: 500;
+    }
+    
+    .help-text {
+        display: block;
+        font-size: 0.8rem;
+        color: #888;
+        margin-left: 22px;
+        line-height: 1.3;
     }
     
     /* Responsive Styles */
@@ -1278,7 +1311,7 @@
               
               <div class="checkbox-group main-service">
                   <input type="checkbox" name="surveys" value="Boundary" checked onclick="return false;"> 
-                  <label><strong>Boundary Survey</strong> (Only tracts 10 acres or less)</label>
+                  <label><strong>Boundary Survey </strong> (Only tracts 10 acres or less)</label>
               </div>
               <p class="deliverable-hint"><em>*A certified PDF map is included with every survey.</em></p>
               

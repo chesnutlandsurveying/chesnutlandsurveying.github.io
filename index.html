@@ -1224,14 +1224,12 @@
               <input type="text" id="zipcode" name="zipcode" class="form-control" pattern="[0-9]{5}" placeholder="12345" maxlength="5">
             </div>
             
-            <div class="form-group">
-              <label><strong>Survey Services</strong> (A Boundary Survey is required for all projects)*</label>
+            <div class="form-group surveys-section">
+              <label class="group-label"><strong>Survey Services</strong> (A Boundary Survey is required and a PDF map is provided for all projects)*</label>
               
               <div class="checkbox-group main-service">
-                <label>
                   <input type="checkbox" name="surveys" value="Boundary" checked onclick="return false;"> 
-                    <strong>Boundary Survey</strong> (Required - Tracts 10 acres or less)
-                </label>
+                  <label><strong>Boundary Survey</strong> <span class="text-muted">(Only tracts 10 acres or less)</span>
               </div>
               
               <div class="add-on-group" style="margin-left: 20px; border-left: 2px solid #ddd; padding-left: 15px;">

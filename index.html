@@ -1307,31 +1307,40 @@
             </div>
             
             <div class="form-group surveys-section">
-              <label class="group-label"><strong>Survey Services</strong> (All projects require a Boundary Survey & include a PDF map)*</label>
+              <!-- Section Header -->
+              <label class="group-title">
+                Survey Services 
+                <span class="header-requirement"> (All projects require a Boundary Survey & include a PDF map)*</span>
+              </label>            
               
-              <div class="checkbox-group main-service">
-                  <input type="checkbox" name="surveys" value="Boundary" checked onclick="return false;"> 
-                  <label><strong>Boundary Survey </strong> (Only tracts 10 acres or less)</label>
+              <!-- Main Required Service -->
+              <div class="main-service-row">
+                <input type="checkbox" name="surveys" value="Boundary" checked onclick="return false;">
+                <label class="main-label">
+                  Boundary Survey 
+                  <span class="required-note"> (Tracts 10 acres or less)</span>
+                </label>
               </div>
               <p class="deliverable-hint"><em>*A certified PDF map is included with every survey.</em></p>
-              
+                
+              <!-- Add-ons -->
               <div class="add-on-group">
                  <p class="add-on-header"><em>Select optional add-ons:</em></p>
                 
                 <!-- Add-on 1 -->
-                <div class="checkbox-group">
+                <div class="checkbox-item">
                   <label><input type="checkbox" name="surveys" value="LineStaking"> Property Line Staking</label>
                   <p class="checkbox-note">Temporary wooden stakes placed along the lines between corners.</p>
                 </div>
 
                 <!-- Add-on 2 -->
-                <div class="checkbox-group">
+                <div class="checkbox-item">
                   <label><input type="checkbox" name="surveys" value="SoilGrid"> Soil Grid Map</label>
                   <p class="checkbox-note">Staked 50' or 100' grid for septic analysis by a soil scientist.</p>
                 </div>
             
                 <!-- Add-on 3 -->
-                <div class="checkbox-group">
+                <div class="checkbox-item">
                   <label><input type="checkbox" name="surveys" value="Topographic">Topographic Survey (Tracts less than 3 acres)</label>
                   <p class="checkbox-note">Mapping of land elevations and contours.</p>
                 </div>

@@ -824,76 +824,80 @@
         margin-top: 30px;
     }
 
-    /* 1. The Big Header */
+    /* 1. The Title (Scaled down from 1.4rem to 1.1rem) */
     .surveys-main-title {
-        font-size: 1.4rem; /* Makes it bigger */
-        font-weight: 800;
-        margin-bottom: 4px;
-        color: #333;
+        font-size: 1.1rem; 
+        font-weight: 700;
+        margin-bottom: 2px;
+        color: var(--primary); /* Keeps it your brand blue */
+        font-family: 'Montserrat', sans-serif;
     }
     
-    /* 2. The Requirement Subtitle (Prevents the 2-line wrap issue) */
+    /* 2. The Red Requirement Note */
     .surveys-subtitle {
-        font-size: 0.9rem;
-        color: #666;
-        margin-bottom: 20px;
+        font-size: 0.85rem;
+        color: #d9534f; /* Professional red */
+        font-weight: 500;
+        margin-bottom: 15px;
     }
     
-    /* 3. Indent everything below the title */
+    /* 3. Spacing and Alignment */
     .surveys-content-wrapper {
-        margin-left: 15px;
+        margin-left: 5px;
     }
     
-    /* 4. The Boundary Line & The Space Fix */
     .main-service-row {
         display: flex;
         align-items: center;
         gap: 10px;
-        margin-bottom: 5px;
+        margin-bottom: 3px;
     }
     
     .main-label {
-        font-weight: bold;
-        font-size: 1.05rem;
+        font-weight: 600;
+        font-size: 1rem;
     }
     
+    /* The space between Title and (10 acres) */
     .acreage-note {
         font-weight: normal;
         color: #888;
-        margin-left: 8px; /* THIS ADDS THE SPACE YOU WANT */
+        font-size: 0.9rem;
     }
     
     .pdf-notice {
-        font-size: 0.85rem;
-        color: #003366;
+        font-size: 0.8rem;
+        color: var(--primary);
         margin-left: 28px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
     
-    /* 5. Indent the Add-ons even further */
+    /* 4. Indentation for Add-ons */
     .add-on-sub-group {
         margin-left: 28px;
-        padding-left: 18px;
+        padding-left: 15px;
         border-left: 2px solid #eee;
     }
     
     .add-on-instruction {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         font-style: italic;
         color: #777;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
     
     .checkbox-item {
-        margin-bottom: 15px;
+        margin-bottom: 12px;
     }
     
     .help-text {
         display: block;
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         color: #999;
         margin-left: 24px;
+        line-height: 1.2;
     }
+    
     
     /* Responsive Styles */
     @media (max-width: 992px) {
@@ -1301,7 +1305,7 @@
             
             <div class="form-group surveys-section">
               <!-- 1. The Big Category Header -->
-              <h3 class="surveys-main-title">Survey Services</h3>
+              <h4 class="surveys-main-title">Survey Services</h4>
               <p class="surveys-subtitle">All projects require a Boundary Survey*</p>
             
               <!-- 2. The Entire Content Indented -->

@@ -824,82 +824,75 @@
         margin-top: 30px;
     }
 
-    /* The top "Survey Services" label */
-    .group-title {
-        display: block;
-        font-weight: bold;
-        font-size: 1.1rem;
-        margin-bottom: 12px !important; /* Space above the checkbox */
+    /* 1. The Big Header */
+    .surveys-main-title {
+        font-size: 1.4rem; /* Makes it bigger */
+        font-weight: 800;
+        margin-bottom: 4px;
         color: #333;
     }
     
-    .header-requirement {
-        font-weight: normal;
-        font-size: 0.85rem;
-        color: #d9534f; /* A subtle dark red to emphasize the requirement */
-        display: block; /* Moves it to its own line if the screen is narrow */
-        margin-top: 2px;
+    /* 2. The Requirement Subtitle (Prevents the 2-line wrap issue) */
+    .surveys-subtitle {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 20px;
     }
     
-    /* The Boundary Survey Row */
+    /* 3. Indent everything below the title */
+    .surveys-content-wrapper {
+        margin-left: 15px;
+    }
+    
+    /* 4. The Boundary Line & The Space Fix */
     .main-service-row {
         display: flex;
         align-items: center;
         gap: 10px;
-        margin-bottom: 2px;
+        margin-bottom: 5px;
     }
     
     .main-label {
         font-weight: bold;
-        font-size: 1rem;
-        margin: 0;
+        font-size: 1.05rem;
     }
     
-    .required-note {
+    .acreage-note {
         font-weight: normal;
-        color: #777;
-        font-size: 0.9rem;
+        color: #888;
+        margin-left: 8px; /* THIS ADDS THE SPACE YOU WANT */
     }
     
-    /* The PDF Map Note */
-    .deliverable-hint {
-        font-size: 0.8rem;
-        color: #003366; /* Your brand blue */
-        margin-left: 26px; /* Aligns under the text, past the checkbox */
-        margin-top: 0;
-        margin-bottom: 15px;
+    .pdf-notice {
+        font-size: 0.85rem;
+        color: #003366;
+        margin-left: 28px;
+        margin-bottom: 20px;
     }
     
-    /* The Vertical Line / Indented section */
-    .add-on-group {
-        margin-left: 32px;
-        border-left: 2px solid #e0e0e0;
+    /* 5. Indent the Add-ons even further */
+    .add-on-sub-group {
+        margin-left: 28px;
         padding-left: 18px;
-        margin-top: 10px;
+        border-left: 2px solid #eee;
     }
     
-    .add-on-header {
+    .add-on-instruction {
         font-size: 0.85rem;
         font-style: italic;
-        color: #666;
+        color: #777;
         margin-bottom: 15px;
     }
     
     .checkbox-item {
-        margin-bottom: 18px;
-    }
-    
-    .checkbox-item label {
-        display: block;
-        font-weight: 500;
+        margin-bottom: 15px;
     }
     
     .help-text {
         display: block;
         font-size: 0.8rem;
-        color: #888;
-        margin-left: 22px;
-        line-height: 1.3;
+        color: #999;
+        margin-left: 24px;
     }
     
     /* Responsive Styles */
@@ -1307,46 +1300,42 @@
             </div>
             
             <div class="form-group surveys-section">
-              <!-- Section Header -->
-              <label class="group-title">
-                Survey Services 
-                <span class="header-requirement"> (All projects require a Boundary Survey & include a PDF map)*</span>
-              </label>            
-              
-              <!-- Main Required Service -->
-              <div class="main-service-row">
-                <input type="checkbox" name="surveys" value="Boundary" checked onclick="return false;">
-                <label class="main-label">
-                  Boundary Survey 
-                  <span class="required-note"> (Tracts 10 acres or less)</span>
-                </label>
-              </div>
-              <p class="deliverable-hint"><em>*A certified PDF map is included with every survey.</em></p>
-                
-              <!-- Add-ons -->
-              <div class="add-on-group">
-                 <p class="add-on-header"><em>Select optional add-ons:</em></p>
-                
-                <!-- Add-on 1 -->
-                <div class="checkbox-item">
-                  <label><input type="checkbox" name="surveys" value="LineStaking"> Property Line Staking</label>
-                  <p class="checkbox-note">Temporary wooden stakes placed along the lines between corners.</p>
-                </div>
-
-                <!-- Add-on 2 -->
-                <div class="checkbox-item">
-                  <label><input type="checkbox" name="surveys" value="SoilGrid"> Soil Grid Map</label>
-                  <p class="checkbox-note">Staked 50' or 100' grid for septic analysis by a soil scientist.</p>
-                </div>
+              <!-- 1. The Big Category Header -->
+              <h3 class="surveys-main-title">Survey Services</h3>
+              <p class="surveys-subtitle">All projects require a Boundary Survey*</p>
             
-                <!-- Add-on 3 -->
-                <div class="checkbox-item">
-                  <label><input type="checkbox" name="surveys" value="Topographic">Topographic Survey (Tracts less than 3 acres)</label>
-                  <p class="checkbox-note">Mapping of land elevations and contours.</p>
-                </div>
+              <!-- 2. The Entire Content Indented -->
+              <div class="surveys-content-wrapper">
                 
-            </div>
-          </div>
+                <!-- 3. The Boundary Line (The Base) -->
+                <div class="main-service-row">
+                  <input type="checkbox" name="surveys" value="Boundary" checked onclick="return false;">
+                  <label class="main-label">Boundary Survey <span class="acreage-note">(10 acres or less)</span></label>
+                </div>
+                <p class="pdf-notice"><em>*A certified PDF map is included with every survey.</em></p>
+            
+                <!-- 4. The Add-ons (Indented Again) -->
+                <div class="add-on-sub-group">
+                  <p class="add-on-instruction">Select optional add-ons:</p>
+                  
+                  <div class="checkbox-item">
+                    <label><input type="checkbox" name="surveys" value="LineStaking"> Property Line Staking</label>
+                    <span class="help-text">Temporary wooden stakes placed along the lines between corners.</span>
+                  </div>
+            
+                  <div class="checkbox-item">
+                    <label><input type="checkbox" name="surveys" value="SoilGrid"> Soil Grid Map</label>
+                    <span class="help-text">Staked 50' or 100' grid for septic analysis by a soil scientist.</span>
+                  </div>
+            
+                  <div class="checkbox-item">
+                    <label><input type="checkbox" name="surveys" value="Topographic"> Topographic Survey</label>
+                    <span class="help-text">Mapping of land elevations and contours (Only for tracts less than 3 acres).</span>
+                  </div>
+                  
+                </div> <!-- end sub group Add-ons (Indented Again) -->
+              </div> <!-- end wrapper -->
+            </div> <!-- end survey section -->
             
             <div class="form-group">
               <label>Are you having issues with your neighbor?*</label>
